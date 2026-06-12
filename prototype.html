@@ -1,0 +1,2906 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMM-агентство FlowPilot: система роста в соцсетях</title>
+    <meta name="description" content="FlowPilot выстраивает SMM-систему для бизнеса, блогеров и онлайн-школ: стратегия, контент, VK, Telegram, аналитика. Заявка на разбор. Без цен на первом экране.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="FlowPilot">
+    <link rel="canonical" href="https://flowpilot.ru/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="FlowPilot">
+    <meta property="og:title" content="SMM-агентство FlowPilot: система роста в соцсетях">
+    <meta property="og:description" content="SMM-система для бизнеса, блогеров и онлайн-школ в России и СНГ: стратегия, контент, продвижение, аналитика.">
+    <meta property="og:url" content="https://flowpilot.ru/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SMM-агентство FlowPilot: система роста в соцсетях">
+    <meta name="twitter:description" content="Соцсети как система роста: стратегия, контент, VK, Telegram, аналитика. Founder-led SMM для России и СНГ.">
+    <meta name="theme-color" content="#111111">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amber: '#FF8A3D',
+                        dark: '#111111',
+                        bgLight: '#F0F4F8',
+                        gameBg: '#F8FAFC',
+                        gameGrid: '#E2E8F0',
+                        gameZone: '#E2E8F0',
+                        gameServer: '#1E293B',
+                        gameMachine: '#F1F5F9',
+                        gameMachineBase: '#CBD5E1',
+                        gameMoney: '#334155',
+                        gameGold: '#FBBF24',
+                        gameGreen: '#10B981',
+                        gameBlue: '#3B82F6',
+                        gameRed: '#EF4444',
+                        gamePurple: '#8B5CF6',
+                        blue: '#3B82F6',
+                        purple: '#8B5CF6',
+                        green: '#10B981'
+                    },
+                    fontFamily: {
+                        heading: ['Unbounded', 'sans-serif'],
+                        body: ['Manrope', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    boxShadow: {
+                        'solid': '8px 8px 0px 0px rgba(0,0,0,1)',
+                        'solid-sm': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'game': '2px 2px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F0F4F8;
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            overflow-x: hidden;
+        }
+
+        /* Единый фон для всех секций */
+        .section-grid-bg {
+            background-color: #F0F4F8;
+            background-image:
+                linear-gradient(rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Живые анимации для финального блока */
+        @keyframes softFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.15); }
+            70% { box-shadow: 0 0 0 14px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+
+        @keyframes flowRun {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .live-card {
+            animation: softFloat 5s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .live-card-delay-1 { animation-delay: 0.6s; }
+        .live-card-delay-2 { animation-delay: 1.2s; }
+        .live-card-delay-3 { animation-delay: 1.8s; }
+
+        .live-chip {
+            animation: pulseGlow 2.4s infinite;
+        }
+
+        .compare-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            will-change: transform;
+        }
+
+        .compare-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .compare-item {
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .compare-item:hover {
+            transform: translateX(6px);
+        }
+
+        .compare-bullet {
+            transition: transform 0.25s ease;
+        }
+
+        .compare-item:hover .compare-bullet {
+            transform: scale(1.18) rotate(-8deg);
+        }
+
+        .step-card:hover .step-icon {
+            transform: translateY(-4px) scale(1.12) rotate(-10deg);
+            box-shadow: 0 8px 20px rgba(17, 17, 17, 0.22);
+        }
+
+        .step-icon {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            animation: pulseGlow 3s infinite;
+        }
+
+        .process-flow-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            transform: translateY(-50%);
+            background: linear-gradient(90deg, rgba(59,130,246,0.1), rgba(59,130,246,0.7), rgba(59,130,246,0.1));
+            background-size: 200% 100%;
+            animation: flowRun 2.8s linear infinite;
+            border-radius: 999px;
+            z-index: 0;
+            opacity: 0.9;
+        }
+
+        /* Анимация парения для иконок в первом блоке */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(var(--tw-rotate, 0deg)); }
+            50% { transform: translateY(-15px) rotate(calc(var(--tw-rotate, 0deg) + 5deg)); }
+            100% { transform: translateY(0px) rotate(var(--tw-rotate, 0deg)); }
+        }
+        
+        .hero-float-icon {
+            z-index: 5;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Задержки для разных иконок, чтобы они двигались вразнобой */
+        .hero-float-icon:nth-child(1) { animation-delay: 0s; }
+        .hero-float-icon:nth-child(2) { animation-delay: -2s; }
+        .hero-float-icon:nth-child(3) { animation-delay: -4s; }
+        .hero-float-icon:nth-child(4) { animation-delay: -1s; }
+        .hero-float-icon:nth-child(5) { animation-delay: -3s; }
+
+        /* Стили для интерактивных карточек аудитории */
+        .aud-card {
+            background-color: transparent;
+            border-color: #374151; /* gray-700 */
+            color: #9CA3AF; /* gray-400 */
+            box-shadow: none;
+            z-index: 0;
+        }
+        .aud-card:hover {
+            border-color: #6B7280; /* gray-500 */
+            color: #E5E7EB; /* gray-200 */
+        }
+        .aud-card .aud-desc {
+            color: #6B7280; /* gray-500 */
+        }
+        
+        .aud-card.active {
+            background-color: white;
+            border-color: #111111;
+            color: #111111;
+            z-index: 10;
+            transform: scale(1.05) rotate(0deg) translateY(-4px) !important;
+        }
+        .aud-card:nth-child(1).active { box-shadow: 8px 8px 0px 0px #3B82F6; } /* Blue shadow */
+        .aud-card:nth-child(2).active { box-shadow: 8px 8px 0px 0px #8B5CF6; } /* Purple shadow */
+        .aud-card:nth-child(3).active { box-shadow: 8px 8px 0px 0px #10B981; } /* Green shadow */
+
+        .aud-card.active .aud-desc {
+            color: #475569; /* slate-600 */
+        }
+
+        /* Рамки выделения (Стиль 1 блока) */
+        .selection-box,
+        .selection-box-dashed {
+            position: relative;
+            background: white;
+            display: inline-block;
+        }
+        .selection-box { border: 3px solid #111; }
+        .selection-box-dashed {
+            border: 3px dashed #111;
+            transition: all 0.2s;
+        }
+        .selection-box::before, .selection-box::after,
+        .selection-box .handle-bl, .selection-box .handle-br,
+        .selection-box-dashed::before, .selection-box-dashed::after,
+        .selection-box-dashed .handle-bl, .selection-box-dashed .handle-br {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #111;
+            border: 2px solid white;
+        }
+        .selection-box::before, .selection-box-dashed::before { top: -6px; left: -6px; }
+        .selection-box::after, .selection-box-dashed::after { top: -6px; right: -6px; }
+        .selection-box .handle-bl, .selection-box-dashed .handle-bl { bottom: -6px; left: -6px; }
+        .selection-box .handle-br, .selection-box-dashed .handle-br { bottom: -6px; right: -6px; }
+
+        .bg-decor { position: absolute; color: rgba(0,0,0,0.1); font-weight: bold; font-family: sans-serif; z-index: -1; }
+
+        /* =========================================
+           СТИЛИ ИГРОВОГО ПОЛЯ (ФАБРИКА SMM)
+           ========================================= */
+        .game-board {
+            background-color: #F8FAFC;
+            background-image: 
+                linear-gradient(#E2E8F0 1px, transparent 1px),
+                linear-gradient(90deg, #E2E8F0 1px, transparent 1px);
+            background-size: 40px 40px;
+            border: 4px solid #111;
+            border-radius: 16px;
+            box-shadow: 12px 12px 0px 0px rgba(0,0,0,1);
+            position: relative;
+            overflow: hidden;
+            width: calc(100vw - 20px);
+            max-width: 1500px;
+            height: 82vh;
+            min-height: 700px;
+            user-select: none;
+            margin: 0 auto;
+        }
+
+        .office-zone {
+            position: absolute;
+            right: 8%;
+            bottom: 10%;
+            width: 48%;
+            height: 46%;
+            background: #DCE3EC;
+            border: 2px solid #BFC9D8;
+            border-radius: 16px;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.45);
+            z-index: 0;
+        }
+        .office-zone::before {
+            content: 'Рабочая зона команды';
+            position: absolute;
+            top: 10px;
+            left: 14px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: #475569;
+            font-weight: 700;
+        }
+
+        .zone-title {
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 700;
+            color: #334155;
+            letter-spacing: 0.03em;
+        }
+
+        .zone-box {
+            position: absolute;
+            border: 2px dashed #94A3B8;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.35);
+            z-index: 1;
+        }
+
+        /* Деревья */
+        .tree { position: absolute; z-index: 10; }
+        .tree-leaves { position: relative; width: 40px; height: 40px; }
+        .tree-circle { position: absolute; background: #10B981; border: 2px solid #111; border-radius: 50%; }
+        .tree-circle-1 { width: 24px; height: 24px; top: 0; left: 8px; z-index: 2; }
+        .tree-circle-2 { width: 20px; height: 20px; bottom: 4px; left: 0; z-index: 1; }
+        .tree-circle-3 { width: 20px; height: 20px; bottom: 4px; right: 0; z-index: 1; }
+        .tree-base { width: 16px; height: 12px; background: white; border: 2px solid #111; margin: 0 auto; margin-top: -4px; position: relative; z-index: 0; }
+
+        /* Серверы */
+        .server-rack {
+            position: absolute; width: 36px; height: 78px; background: #1E293B; border: 2px solid #111; border-radius: 4px;
+            display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; padding: 4px 0; z-index: 15;
+            box-shadow: 2px 2px 0px #111;
+        }
+        .server-light { width: 20px; height: 6px; background: #0F172A; border-radius: 2px; display: flex; align-items: center; padding: 0 2px; gap: 2px; }
+        .server-light span { width: 3px; height: 3px; border-radius: 50%; background: #10B981; animation: blink 1s infinite alternate; }
+        .server-light span:nth-child(2) { animation-delay: 0.3s; background: #3B82F6; }
+        .server-light span:nth-child(3) { animation-delay: 0.6s; background: #3B82F6; }
+        @keyframes blink { 0% { opacity: 0.2; } 100% { opacity: 1; } }
+
+        /* Рабочие станции (Станки) */
+        .machine { position: absolute; z-index: 20; width: 48px; display: flex; flex-direction: column; align-items: center; }
+        .desk-tag {
+            position: absolute;
+            bottom: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border: 1px solid #111;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            line-height: 1;
+            padding: 2px 6px;
+            white-space: nowrap;
+            z-index: 30;
+        }
+        .machine-top { width: 48px; height: 32px; background: white; border: 2px solid #111; border-radius: 6px 6px 0 0; position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; }
+        .machine-screen { width: 24px; height: 16px; background: #3B82F6; border: 2px solid #111; border-radius: 2px; }
+        .machine-btn { position: absolute; right: -4px; top: 8px; width: 4px; height: 10px; background: #EF4444; border: 2px solid #111; border-left: none; border-radius: 0 2px 2px 0; }
+        .machine-base { width: 48px; height: 24px; background: #CBD5E1; border: 2px solid #111; border-top: none; border-radius: 0 0 6px 6px; position: relative; z-index: 1; }
+        .machine-leg { position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); width: 6px; height: 8px; background: #111; }
+
+        /* Денежная машина (Сейф) */
+        .money-machine { position: absolute; z-index: 25; display: flex; flex-direction: column; align-items: center; }
+        .mm-display { background: #111; color: #FBBF24; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: bold; padding: 2px 6px; border: 2px solid #111; border-radius: 4px 4px 0 0; z-index: 3; position: relative; }
+        .mm-body { width: 56px; height: 64px; background: #334155; border: 2px solid #111; border-radius: 0 0 8px 8px; position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; box-shadow: 4px 4px 0px rgba(0,0,0,0.2); }
+        .mm-slot { width: 16px; height: 16px; background: #111; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+        .mm-slot-inner { width: 6px; height: 6px; background: #FBBF24; border-radius: 50%; }
+
+        /* Диван */
+        .couch { position: absolute; z-index: 15; display: flex; flex-direction: column; box-shadow: 2px 2px 0px #111; border-radius: 4px; }
+        .couch-top { display: flex; border: 2px solid #111; border-bottom: none; background: #FCD34D; border-radius: 4px 4px 0 0; }
+        .couch-cushion { width: 24px; height: 24px; border-right: 2px solid #111; }
+        .couch-cushion:last-child { border-right: none; }
+        .couch-base { width: 100%; height: 16px; background: #D97706; border: 2px solid #111; border-radius: 0 0 4px 4px; }
+
+        /* Большой экран */
+        .big-screen { position: absolute; z-index: 15; width: 80px; height: 50px; background: #2563EB; border: 3px solid #111; border-radius: 6px; box-shadow: 4px 4px 0px rgba(0,0,0,0.2); padding: 4px; }
+        .big-screen svg { width: 100%; height: 100%; stroke: white; fill: none; stroke-width: 2; }
+
+        /* Сотрудники (Агенты) */
+        .worker { position: absolute; z-index: 30; cursor: pointer; display: flex; flex-direction: column; align-items: center; transition: filter 0.2s; }
+        .worker:hover { filter: drop-shadow(0 0 6px rgba(255, 138, 61, 0.8)); }
+        .w-head { width: 18px; height: 18px; background: #FFD1A9; border: 2px solid #111; border-radius: 50%; position: relative; z-index: 3; }
+        .w-hair { position: absolute; top: -2px; left: -2px; right: -2px; height: 6px; background: #111; border-radius: 50% 50% 0 0; }
+        .w-body { width: 24px; height: 18px; background: var(--w-color); border: 2px solid #111; border-radius: 4px 4px 0 0; margin-top: -2px; position: relative; z-index: 2; }
+        .w-legs { display: flex; justify-content: space-between; width: 14px; margin-top: -2px; z-index: 1; }
+        .w-leg { width: 5px; height: 8px; background: #111; }
+
+        /* Пузыри диалогов и задач */
+        .bubble {
+            position: absolute; background: white; border: 2px solid #111; color: #111;
+            font-family: 'Manrope', sans-serif; font-size: 10px; font-weight: 800;
+            padding: 4px 8px; border-radius: 12px; box-shadow: 2px 2px 0px #111;
+            pointer-events: none; z-index: 50; white-space: nowrap;
+            transform: translate(-50%, -100%); top: -5px; left: 50%;
+            opacity: 0;
+        }
+        .bubble::after {
+            content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%);
+            border-width: 5px 5px 0; border-style: solid; border-color: #111 transparent transparent transparent;
+        }
+
+        /* Всплывающие деньги */
+        .floating-money {
+            position: absolute; color: #10B981; font-family: 'JetBrains Mono', monospace;
+            font-size: 14px; font-weight: bold; text-shadow: 1px 1px 0 #111, -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111;
+            z-index: 60; pointer-events: none; opacity: 0;
+        }
+
+        /* UI Панели */
+        .ui-panel { background: white; border: 2px solid #111; box-shadow: 4px 4px 0px #111; border-radius: 8px; }
+        
+        /* Анимация ходьбы */
+        @keyframes walk {
+            0% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-2px) rotate(5deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(-2px) rotate(-5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        .walking .w-body { animation: walk 0.62s infinite; }
+        .walking .w-legs .w-leg:nth-child(1) { animation: walk 0.62s infinite alternate; }
+        .walking .w-legs .w-leg:nth-child(2) { animation: walk 0.62s infinite alternate-reverse; }
+
+        /* Прогресс бар над станком */
+        .progress-bar-container {
+            position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+            width: 30px; height: 6px; background: white; border: 1px solid #111; border-radius: 3px;
+            display: none; z-index: 40; overflow: hidden;
+        }
+        .progress-bar-fill { height: 100%; background: #10B981; width: 0%; }
+
+        .machine.working .machine-top {
+            box-shadow: 0 0 0 2px #111, 0 0 16px rgba(16, 185, 129, 0.55);
+            animation: machinePulse 0.8s infinite;
+        }
+        @keyframes machinePulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .worker-label {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #111;
+            color: #fff;
+            border: 1px solid #111;
+            border-radius: 999px;
+            font-size: 8px;
+            line-height: 1;
+            padding: 3px 6px;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: nowrap;
+            z-index: 45;
+        }
+
+        .task-chip {
+            position: absolute;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border: 1px solid #111;
+            border-radius: 999px;
+            font-size: 8px;
+            line-height: 1;
+            padding: 2px 6px;
+            font-family: 'JetBrains Mono', monospace;
+            color: #111;
+            display: none;
+            z-index: 45;
+            white-space: nowrap;
+        }
+
+        .walk-path {
+            position: absolute;
+            border-top: 2px dashed rgba(17, 17, 17, 0.15);
+            transform-origin: left center;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .office-card {
+            position: absolute;
+            background: #fff;
+            border: 2px solid #111;
+            border-radius: 8px;
+            box-shadow: 4px 4px 0 #111;
+            z-index: 12;
+        }
+
+        .meeting-table {
+            position: absolute;
+            width: 110px;
+            height: 52px;
+            background: #E2E8F0;
+            border: 2px solid #111;
+            border-radius: 8px;
+            box-shadow: 3px 3px 0 #111;
+            z-index: 11;
+        }
+        .meeting-chair {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #111;
+            background: #fff;
+            border-radius: 4px;
+        }
+
+        .rest-lamp {
+            position: absolute;
+            width: 14px;
+            height: 28px;
+            border: 2px solid #111;
+            border-radius: 6px 6px 2px 2px;
+            background: #FDE68A;
+            box-shadow: 2px 2px 0 #111;
+            z-index: 12;
+        }
+
+        .tiny-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 8px;
+            font-weight: 700;
+            color: #334155;
+            text-transform: uppercase;
+        }
+
+        .coffee-machine {
+            position: absolute;
+            width: 28px;
+            height: 34px;
+            border: 2px solid #111;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 2px 2px 0 #111;
+            z-index: 12;
+        }
+        .coffee-machine::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            width: 16px;
+            height: 8px;
+            border: 2px solid #111;
+            background: #E2E8F0;
+        }
+        .coffee-machine::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 9px;
+            width: 8px;
+            height: 6px;
+            border: 2px solid #111;
+            background: #FDE68A;
+        }
+    </style>
+</head>
+<body class="font-body min-h-screen flex flex-col relative">
+
+    <style>
+        .bg-decor {
+            position: absolute;
+            color: #CBD5E1;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: bold;
+            z-index: 10;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .pseudo-3d {
+            filter: drop-shadow(0 10px 18px rgba(59, 130, 246, 0.28));
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+        .pseudo-3d:hover {
+            transform: scale(1.05) rotate(0deg);
+        }
+
+        .hero-float-icon {
+            z-index: 5;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-float-icon,
+            .live-card,
+            .live-chip,
+            .step-icon,
+            .section-bridge-track {
+                animation: none !important;
+            }
+            .compare-card:hover,
+            .cta-pain-row:hover,
+            .cta-founder-panel:hover {
+                transform: none !important;
+            }
+        }
+
+        #faq-trust .faq-content {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease;
+        }
+
+        #faq-trust {
+            background-color: #ffffff;
+        }
+
+        @media (min-width: 1024px) {
+            #faq-trust .faq-trust-grid {
+                grid-template-rows: auto 1fr;
+                align-items: stretch;
+            }
+
+            #faq-trust .faq-trust-intro-right {
+                padding-top: 4.5rem;
+            }
+        }
+
+        .section-bridge {
+            background-color: #111111;
+        }
+
+        @keyframes bridgeMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* О компании — bento cockpit */
+        #about-company {
+            background-color: #FAFAF8;
+        }
+
+        #about-company .about-stat {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        #about-company .about-stat:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 0 #111;
+        }
+
+        #about-company .about-bento-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #about-company .about-bento-card:hover {
+            transform: translateY(-4px);
+        }
+
+        #about-company .about-founder-card {
+            background: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
+        }
+
+        #about-company .about-founder-avatar {
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #FF8A3D 0%, #F59E0B 100%);
+            border: 4px solid #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 900;
+            font-size: 1.75rem;
+            color: #111;
+            box-shadow: 4px 4px 0 0 #111;
+            flex-shrink: 0;
+        }
+
+        #about-company .about-flow-line {
+            stroke: #111;
+            stroke-width: 2;
+            stroke-dasharray: 6 4;
+            fill: none;
+            opacity: 0.25;
+        }
+
+        #about-company .about-role-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            border: 2px solid #111;
+            border-radius: 9999px;
+            background: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #111;
+            box-shadow: 2px 2px 0 0 #111;
+        }
+
+        #about-company .about-role-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid #111;
+            flex-shrink: 0;
+        }
+
+        #about-company .about-compare-col {
+            min-height: 100%;
+        }
+
+        #about-company .about-compare-col--winner {
+            transform: translateY(-8px);
+        }
+
+        @media (min-width: 768px) {
+            #about-company .about-compare-col--winner {
+                transform: translateY(-12px);
+            }
+        }
+
+        #faq-trust .faq-trust-grid {
+            align-items: stretch;
+        }
+
+        @media (min-width: 1024px) {
+            #faq-trust .faq-trust-cards {
+                height: auto;
+            }
+        }
+
+        #faq-trust .trust-row-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2rem;
+            padding: 0.125rem 0.5rem;
+            border: 2px solid #111;
+            border-radius: 9999px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .section-bridge-track {
+            animation: bridgeMarquee 45s linear infinite;
+            will-change: transform;
+        }
+
+        .final-cta-section {
+            background-color: #FFF4E8;
+            background-image:
+                radial-gradient(circle at 12% 18%, rgba(255, 138, 61, 0.14) 0%, transparent 42%),
+                radial-gradient(circle at 88% 72%, rgba(59, 130, 246, 0.1) 0%, transparent 38%);
+        }
+
+        .final-cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(17, 17, 17, 0.04) 1px, transparent 1px);
+            background-size: 24px 24px;
+            pointer-events: none;
+            opacity: 0.35;
+        }
+
+        #final-cta .cta-pain-row {
+            background-color: rgba(255, 255, 255, 0.72);
+            border-left-width: 6px;
+            border-left-color: #FF8A3D;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #final-cta .cta-primary {
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        #final-cta .cta-primary:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 0 #111;
+        }
+
+        #final-cta .cta-secondary:hover {
+            background-color: rgba(59, 130, 246, 0.08);
+        }
+
+        #final-cta .cta-pain-row:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 0 #111;
+        }
+
+        #final-cta .cta-pain-row:nth-child(1):hover { background-color: rgba(59, 130, 246, 0.12); }
+        #final-cta .cta-pain-row:nth-child(2):hover { background-color: rgba(139, 92, 246, 0.12); }
+        #final-cta .cta-pain-row:nth-child(3):hover { background-color: rgba(255, 138, 61, 0.18); }
+
+        #final-cta .cta-founder-panel {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #final-cta .cta-founder-panel:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 0 #111;
+        }
+
+        #cookie-banner {
+            transform: translateY(100%);
+            transition: transform 0.35s ease;
+        }
+
+        #cookie-banner.is-visible {
+            transform: translateY(0);
+        }
+
+        #final-cta .cta-founder-form input:focus,
+        #final-cta .cta-founder-form textarea:focus,
+        #lead-form input:focus,
+        #lead-form textarea:focus,
+        #lead-form select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35);
+        }
+
+        #lead-form .field-error {
+            border-color: #EF4444 !important;
+        }
+
+        .fp-honeypot {
+            position: absolute;
+            left: -10000px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+
+    <!-- БЛОК 1: HERO (Светлый брутализм) -->
+    <section class="relative min-h-[90vh] flex flex-col items-center justify-center pt-20 pb-20 overflow-hidden">
+        <div class="bg-decor text-2xl top-[20%] left-[15%]">+</div>
+        <div class="bg-decor text-2xl top-[60%] left-[10%]">o</div>
+        <div class="bg-decor text-2xl top-[30%] right-[20%]">x</div>
+        <div class="bg-decor text-2xl top-[70%] right-[15%]">+</div>
+
+        <div class="absolute top-0 right-10 bg-amber text-dark font-heading font-bold text-center py-4 px-3 shadow-solid-sm z-20" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);">
+            <div class="mb-2">Flow<br>Pilot</div>
+        </div>
+
+        <div class="absolute top-8 left-8 flex items-center justify-center w-16 h-16 bg-blue text-white font-heading font-black text-2xl rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md shadow-3d transform -rotate-12 z-20">
+            FP
+        </div>
+
+        <!-- 3D Элементы — по краям, не перекрывают заголовок -->
+        <div class="hero-float-icon absolute top-[12%] left-[3%] md:left-[5%] pseudo-3d w-16 h-16 md:w-20 md:h-20 text-blue transform rotate-12 hidden md:block">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full drop-shadow-2xl"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10H6v-2h12v2zm0-3H6V7h12v2z"/></svg>
+        </div>
+        <div class="hero-float-icon absolute top-[22%] right-[3%] md:right-[5%] pseudo-3d w-16 h-16 md:w-20 md:h-20 text-green transform -rotate-12 hidden md:block">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full drop-shadow-2xl"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+        </div>
+        <div class="hero-float-icon absolute bottom-[28%] left-[4%] pseudo-3d w-14 h-14 md:w-16 md:h-16 text-purple transform -rotate-12 hidden md:block">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full drop-shadow-2xl"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+        </div>
+        <div class="hero-float-icon absolute bottom-[32%] right-[4%] pseudo-3d w-14 h-14 md:w-16 md:h-16 text-pink-500 transform rotate-12 hidden md:block">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full drop-shadow-2xl"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <div class="hero-float-icon absolute top-[58%] left-[2%] pseudo-3d w-12 h-12 md:w-14 md:h-14 text-pink-400 transform rotate-45 hidden lg:block">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full drop-shadow-2xl"><circle cx="12" cy="12" r="10"></circle></svg>
+        </div>
+
+        <div class="flex-1 flex flex-col items-center justify-center relative z-20 w-full px-4">
+            <div class="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white font-heading font-black text-3xl md:text-5xl px-8 py-3 transform -rotate-2 shadow-[6px_6px_0px_0px_rgba(109,40,217,0.45)] mb-[-10px] z-20">
+                FlowPilot
+            </div>
+
+            <div class="relative z-20 flex flex-col items-center mb-16 text-center w-full max-w-5xl mx-auto">
+                <div class="selection-box px-6 md:px-10 py-4 transform rotate-1 z-30 mb-[-15px] relative">
+                    <span class="handle-bl"></span><span class="handle-br"></span>
+                    <h1 class="font-heading font-black text-3xl md:text-6xl lg:text-7xl text-dark tracking-tight uppercase leading-[1.05]">СИСТЕМНЫЙ SMM</h1>
+                </div>
+                <div class="bg-gradient-to-r from-[#2563EB] via-[#06B6D4] to-[#0EA5E9] text-white font-heading font-black text-4xl md:text-7xl lg:text-8xl px-6 md:px-10 py-4 shadow-[7px_7px_0px_0px_rgba(14,116,144,0.45)] z-20 mb-[-10px] leading-[1.05]">
+                    SMM & РОСТ
+                </div>
+                <div class="bg-amber text-dark font-heading font-black text-2xl md:text-4xl px-8 py-3 transform rotate-2 shadow-solid inline-block mt-2">
+                    ДЛЯ БИЗНЕСА
+                </div>
+            </div>
+
+            <a href="#factory" class="selection-box-dashed px-10 py-5 transform -rotate-1 z-30 flex flex-col items-center cursor-pointer hover:bg-dark hover:text-white group decoration-none">
+                <div class="handle-bl"></div><div class="handle-br"></div>
+                <div class="font-heading font-black text-2xl md:text-3xl text-dark group-hover:text-white mb-1 transition-colors">Нужна система роста?</div>
+                <div class="font-body font-bold text-lg md:text-xl text-amber">Смотреть как мы работаем ↓</div>
+            </a>
+
+            <div class="mt-8 max-w-4xl text-center px-4">
+                <p class="font-body text-base md:text-lg font-bold text-dark">
+                    SMM агентство для предпринимателей, экспертов и компаний в России и СНГ.
+                </p>
+                <p class="font-body text-sm md:text-base text-slate-700 mt-2">
+                    Стратегия, контент, визуал, трафик и аналитика в одной системе. Работаем онлайн по всей РФ, Москве, Санкт-Петербургу, регионам и странам СНГ.
+                </p>
+                <div class="mt-3 flex flex-wrap justify-center gap-2 text-[11px] md:text-xs font-mono font-bold text-slate-700">
+                    <span class="px-2 py-1 border-2 border-dark bg-white">VK</span>
+                    <span class="px-2 py-1 border-2 border-dark bg-white">Telegram</span>
+                    <span class="px-2 py-1 border-2 border-dark bg-white">MAX</span>
+                    <span class="px-2 py-1 border-2 border-dark bg-white">YouTube</span>
+                    <span class="px-2 py-1 border-2 border-dark bg-white">Дзен</span>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- БЛОК 2: ИНТЕРАКТИВНАЯ ФАБРИКА SMM (Точная копия референса) -->
+    <section id="factory" class="w-full pt-16 pb-10 px-0 relative z-20">
+        
+        <!-- Верхняя UI панель -->
+        <div class="flex justify-center mb-6">
+            <div class="ui-panel px-6 py-2 flex items-center gap-4">
+                <span class="font-heading font-black text-lg uppercase">ФАБРИКА SMM</span>
+                <span class="text-gray-300">|</span>
+                <span class="font-body text-sm font-bold text-gray-500">Кликните на сотрудника и раздавайте задачи</span>
+            </div>
+        </div>
+
+        <!-- ИГРОВОЕ ПОЛЕ -->
+        <div class="game-board" id="game-board">
+            
+            <!-- Планировка офиса -->
+            <div class="zone-box" style="left: 5%; top: 13%; width: 28%; height: 74%;">
+                <div class="zone-title">Инфраструктура</div>
+            </div>
+            <div class="zone-box" style="left: 35%; top: 13%; width: 38%; height: 54%;">
+                <div class="zone-title">Рабочая зона</div>
+            </div>
+            <div class="zone-box" style="left: 75%; top: 13%; width: 20%; height: 54%;">
+                <div class="zone-title">Операционная</div>
+            </div>
+            <div class="zone-box" style="left: 35%; top: 70%; width: 60%; height: 17%;">
+                <div class="zone-title">Зона отдыха</div>
+            </div>
+
+            <!-- Деревья -->
+            <div class="tree" style="top: 8%; left: 9%;">
+                <div class="tree-leaves"><div class="tree-circle tree-circle-1"></div><div class="tree-circle tree-circle-2"></div><div class="tree-circle tree-circle-3"></div></div>
+                <div class="tree-base"></div>
+            </div>
+            <div class="tree" style="top: 82%; left: 9%;">
+                <div class="tree-leaves"><div class="tree-circle tree-circle-1"></div><div class="tree-circle tree-circle-2"></div><div class="tree-circle tree-circle-3"></div></div>
+                <div class="tree-base"></div>
+            </div>
+
+            <!-- Серверы -->
+            <div class="server-rack" style="top: 41%; left: 10%;">
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+            </div>
+            <div class="server-rack" style="top: 41%; left: 15%;">
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+            </div>
+            <div class="server-rack" style="top: 41%; left: 20%;">
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+                <div class="server-light"><span></span><span></span><span></span></div>
+            </div>
+
+            <!-- Инфраструктура: мониторинг и хранилище -->
+            <div class="office-card p-2" style="top: 54%; left: 10%; width: 130px;">
+                <div class="tiny-label mb-1">NOC WALL</div>
+                <div class="grid grid-cols-3 gap-1">
+                    <div class="h-5 border border-dark bg-white"></div>
+                    <div class="h-5 border border-dark bg-white"></div>
+                    <div class="h-5 border border-dark bg-white"></div>
+                </div>
+            </div>
+            <div class="office-card p-2" style="top: 66%; left: 10%; width: 130px;">
+                <div class="tiny-label mb-1">BACKUP STACK</div>
+                <div class="flex gap-1">
+                    <div class="w-5 h-5 border-2 border-dark bg-slate-100"></div>
+                    <div class="w-5 h-5 border-2 border-dark bg-slate-100"></div>
+                    <div class="w-5 h-5 border-2 border-dark bg-amber"></div>
+                </div>
+            </div>
+            <div class="office-card p-2" style="top: 78%; left: 10%; width: 72px;">
+                <div class="tiny-label mb-1">UPS</div>
+                <div class="h-6 border-2 border-dark bg-slate-200"></div>
+            </div>
+            <!-- Станки (закрепленные рабочие места) -->
+            <div class="machine" id="machine-1" style="top: 24%; left: 40%;">
+                <div class="progress-bar-container"><div class="progress-bar-fill"></div></div>
+                <div class="machine-top"><div class="machine-screen"></div><div class="machine-btn"></div></div>
+                <div class="machine-base"><div class="machine-leg"></div></div>
+                <div class="desk-tag">STRAT</div>
+            </div>
+            <div class="machine" id="machine-2" style="top: 24%; left: 56%;">
+                <div class="progress-bar-container"><div class="progress-bar-fill"></div></div>
+                <div class="machine-top"><div class="machine-screen"></div><div class="machine-btn"></div></div>
+                <div class="machine-base"><div class="machine-leg"></div></div>
+                <div class="desk-tag">COPY</div>
+            </div>
+            <div class="machine" id="machine-3" style="top: 48%; left: 40%;">
+                <div class="progress-bar-container"><div class="progress-bar-fill"></div></div>
+                <div class="machine-top"><div class="machine-screen"></div><div class="machine-btn"></div></div>
+                <div class="machine-base"><div class="machine-leg"></div></div>
+                <div class="desk-tag">DESIGN</div>
+            </div>
+            <div class="machine" id="machine-4" style="top: 48%; left: 56%;">
+                <div class="progress-bar-container"><div class="progress-bar-fill"></div></div>
+                <div class="machine-top"><div class="machine-screen"></div><div class="machine-btn"></div></div>
+                <div class="machine-base"><div class="machine-leg"></div></div>
+                <div class="desk-tag">ANALYTICS</div>
+            </div>
+            <div class="machine" id="machine-5" style="top: 24%; left: 64%;">
+                <div class="progress-bar-container"><div class="progress-bar-fill"></div></div>
+                <div class="machine-top"><div class="machine-screen"></div><div class="machine-btn"></div></div>
+                <div class="machine-base"><div class="machine-leg"></div></div>
+                <div class="desk-tag">ADS</div>
+            </div>
+            <div class="machine" id="machine-6" style="top: 48%; left: 64%;">
+                <div class="progress-bar-container"><div class="progress-bar-fill"></div></div>
+                <div class="machine-top"><div class="machine-screen"></div><div class="machine-btn"></div></div>
+                <div class="machine-base"><div class="machine-leg"></div></div>
+                <div class="desk-tag">SALES</div>
+            </div>
+
+            <!-- Денежная машина (Сейф) -->
+            <div class="money-machine" id="money-machine" style="top: 34%; left: 79%; transform: translate(-50%, -50%);">
+                <div class="mm-display" id="mm-counter">$70,300</div>
+                <div class="mm-body">
+                    <div class="mm-slot"><div class="mm-slot-inner"></div></div>
+                </div>
+            </div>
+
+            <!-- Операционка: CRM/пайплайн -->
+            <div class="office-card p-2" style="top: 56%; left: 76%; width: 120px;">
+                <div class="tiny-label mb-1">LEAD PIPELINE</div>
+                <div class="space-y-1">
+                    <div class="h-2 border border-dark bg-blue"></div>
+                    <div class="h-2 border border-dark bg-green"></div>
+                    <div class="h-2 border border-dark bg-amber"></div>
+                </div>
+            </div>
+            <div class="office-card p-2" style="top: 70%; left: 76%; width: 66px;">
+                <div class="tiny-label mb-1">CRM</div>
+                <div class="w-full h-6 border-2 border-dark bg-slate-100"></div>
+            </div>
+            <div class="office-card p-2" style="top: 43%; left: 76%; width: 120px;">
+                <div class="tiny-label mb-1">KPI BOARD</div>
+                <div class="grid grid-cols-2 gap-1 text-[8px] font-mono font-bold">
+                    <div class="border border-dark bg-white px-1">CPL: 420</div>
+                    <div class="border border-dark bg-white px-1">CR: 5.8%</div>
+                    <div class="border border-dark bg-white px-1">ROAS: 3.4</div>
+                    <div class="border border-dark bg-amber px-1">LTV: +12%</div>
+                </div>
+            </div>
+
+            <!-- Зона отдыха -->
+            <div class="couch" style="top: 75%; left: 72%;">
+                <div class="couch-top">
+                    <div class="couch-cushion"></div><div class="couch-cushion"></div><div class="couch-cushion"></div>
+                </div>
+                <div class="couch-base"></div>
+            </div>
+            <div class="meeting-table" style="top: 76%; left: 42%; width: 84px; height: 42px;"></div>
+            <div class="meeting-chair" style="top: 75%; left: 40%;"></div>
+            <div class="meeting-chair" style="top: 82%; left: 40%;"></div>
+            <div class="meeting-chair" style="top: 75%; left: 51%;"></div>
+            <div class="meeting-chair" style="top: 82%; left: 51%;"></div>
+            <div class="rest-lamp" style="top: 72%; left: 90%;"></div>
+            <div class="coffee-machine" style="top: 74%; left: 88%;"></div>
+            <div class="office-card p-2" style="top: 73%; left: 62%; width: 66px;">
+                <div class="tiny-label mb-1">SNACK</div>
+                <div class="flex gap-1">
+                    <div class="w-3 h-3 rounded-full border border-dark bg-pink"></div>
+                    <div class="w-3 h-3 rounded-full border border-dark bg-amber"></div>
+                    <div class="w-3 h-3 rounded-full border border-dark bg-green"></div>
+                </div>
+            </div>
+            <div class="office-card p-2" style="top: 73%; left: 53%; width: 78px;">
+                <div class="tiny-label mb-1">CHILL</div>
+                <div class="h-2 border border-dark bg-green mb-1"></div>
+                <div class="h-2 border border-dark bg-white"></div>
+            </div>
+
+            <!-- Большой экран -->
+            <div class="big-screen" style="top: 22%; left: 78%;">
+                <svg viewBox="0 0 100 50"><polyline points="5,40 30,20 50,30 80,5 95,15" /></svg>
+            </div>
+
+            <!-- UI Панель задач (Справа вверху) -->
+            <div class="absolute top-6 right-4 ui-panel w-48 z-40 bg-white">
+                <div class="bg-dark text-white text-center font-heading text-[10px] py-1 rounded-t-md uppercase">Задачи</div>
+                <div class="p-3 font-body text-[10px] font-bold space-y-2">
+                    <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-gameBlue"></div><span id="q-1">Анализ ЦА</span></div>
+                    <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-gameGreen"></div><span id="q-2">Сценарий Reels</span></div>
+                    <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-gamePurple"></div><span id="q-3">Сборка отчета</span></div>
+                    <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-gameRed"></div><span id="q-4">Трафик и лиды</span></div>
+                </div>
+            </div>
+
+            <!-- Live панель команды (Слева сверху) -->
+            <div class="absolute top-4 left-4 ui-panel w-52 z-40 bg-white">
+                <div class="bg-dark text-white text-center font-heading text-[10px] py-1 rounded-t-md uppercase">План смены</div>
+                <div class="p-2 font-mono text-[10px] font-bold space-y-1 border-b border-gray-200" id="shift-plan">
+                    <div>1) Исследование спроса</div>
+                    <div>2) Контент и визуал</div>
+                    <div>3) Запуск и аналитика</div>
+                    <div>4) Обработка лидов</div>
+                </div>
+                <div class="bg-dark text-white text-center font-heading text-[10px] py-1 uppercase">Команда Online</div>
+                <div class="p-2 font-mono text-[10px] font-bold space-y-1" id="team-live-log">
+                    <div>STRAT: ready</div>
+                    <div>COPY: ready</div>
+                    <div>DESIGN: ready</div>
+                    <div>ADS: ready</div>
+                </div>
+            </div>
+
+            <!-- Доска маршрутов -->
+            <div class="office-card px-3 py-2" style="top: 56%; left: 23%; width: 112px;">
+                <div class="font-mono text-[8px] text-dark font-bold mb-1">ROUTE MAP</div>
+                <div class="h-[2px] bg-gameBlue mb-1"></div>
+                <div class="h-[2px] bg-gameGreen mb-1"></div>
+                <div class="h-[2px] bg-gamePurple"></div>
+            </div>
+
+            <!-- Принтер -->
+            <div class="office-card p-2" style="top: 68%; left: 23%; width: 52px;">
+                <div class="w-8 h-4 bg-gameMachineBase border border-dark mx-auto mb-1"></div>
+                <div class="w-10 h-4 bg-white border border-dark mx-auto"></div>
+            </div>
+
+            <!-- СОТРУДНИКИ -->
+            <div class="worker" id="w-1" style="--w-color: #3B82F6; top: 32%; left: 38%;" data-task="Анализ ЦА">
+                <div class="worker-label">STRAT</div>
+                <div class="bubble">Готов к работе!</div>
+                <div class="task-chip"></div>
+                <div class="w-head"><div class="w-hair"></div></div>
+                <div class="w-body"></div>
+                <div class="w-legs"><div class="w-leg"></div><div class="w-leg"></div></div>
+            </div>
+
+            <div class="worker" id="w-2" style="--w-color: #10B981; top: 32%; left: 54%;" data-task="Пишу сценарий">
+                <div class="worker-label">COPY</div>
+                <div class="bubble">Жду задачу</div>
+                <div class="task-chip"></div>
+                <div class="w-head"><div class="w-hair"></div></div>
+                <div class="w-body"></div>
+                <div class="w-legs"><div class="w-leg"></div><div class="w-leg"></div></div>
+            </div>
+
+            <div class="worker" id="w-3" style="--w-color: #9D4EDD; top: 56%; left: 38%;" data-task="Делаю дизайн">
+                <div class="worker-label">DESIGN</div>
+                <div class="bubble">Скучаю...</div>
+                <div class="task-chip"></div>
+                <div class="w-head"><div class="w-hair"></div></div>
+                <div class="w-body"></div>
+                <div class="w-legs"><div class="w-leg"></div><div class="w-leg"></div></div>
+            </div>
+
+            <div class="worker" id="w-4" style="--w-color: #EF4444; top: 56%; left: 54%;" data-task="Считаю лиды">
+                <div class="worker-label">ANALYTICS</div>
+                <div class="bubble">Кликни на меня</div>
+                <div class="task-chip"></div>
+                <div class="w-head"><div class="w-hair"></div></div>
+                <div class="w-body"></div>
+                <div class="w-legs"><div class="w-leg"></div><div class="w-leg"></div></div>
+            </div>
+
+            <div class="worker" id="w-5" style="--w-color: #F59E0B; top: 32%; left: 63%;" data-task="Запускаю рекламу">
+                <div class="worker-label">ADS</div>
+                <div class="bubble">Готов запускать</div>
+                <div class="task-chip"></div>
+                <div class="w-head"><div class="w-hair"></div></div>
+                <div class="w-body"></div>
+                <div class="w-legs"><div class="w-leg"></div><div class="w-leg"></div></div>
+            </div>
+
+            <div class="worker" id="w-6" style="--w-color: #06B6D4; top: 56%; left: 63%;" data-task="Обрабатываю лиды">
+                <div class="worker-label">SALES</div>
+                <div class="bubble">В работе</div>
+                <div class="task-chip"></div>
+                <div class="w-head"><div class="w-hair"></div></div>
+                <div class="w-body"></div>
+                <div class="w-legs"><div class="w-leg"></div><div class="w-leg"></div></div>
+            </div>
+
+            <!-- Инфо-плашка по центру -->
+            <div class="absolute top-[13%] left-[54%] transform -translate-x-1/2 bg-gameGreen text-white font-heading text-[10px] font-bold px-4 py-2 rounded-full border-2 border-dark shadow-game z-40 flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+                Развернуть фабрику AI
+            </div>
+
+            <!-- Нижний статус бар -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 ui-panel px-6 py-2 flex items-center gap-6 font-mono text-[10px] font-bold z-40">
+                <div>Лиды: <span id="ui-leads">4</span></div>
+                <div>Доход: <span id="ui-income">$70,300</span></div>
+                <div>Задачи: <span id="ui-tasks">0</span></div>
+                <div>KPI: <span id="ui-kpi">70%</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- БЛОК 3: ЧТО ВХОДИТ В СИСТЕМУ РОСТА -->
+    <section id="growth-system" class="w-full py-24 md:py-28 px-4 md:px-8 bg-white relative overflow-hidden">
+        <!-- Декоративная сетка на фоне -->
+        <div class="absolute inset-0 z-0" style="background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-14 md:mb-16">
+                <div class="inline-block px-4 py-2 border-2 border-dark bg-white text-dark font-mono text-xs font-bold mb-4 shadow-solid-sm transform -rotate-1">
+                    СИСТЕМА РАБОТЫ
+                </div>
+                <h2 class="font-heading font-black text-4xl md:text-6xl text-slate-900 mb-5">
+                    Что такое SMM-система FlowPilot
+                </h2>
+                <p class="font-body text-lg md:text-xl text-slate-800 max-w-4xl mx-auto font-bold mb-3">
+                    SMM-система FlowPilot — это модель, в которой соцсети связаны со стратегией, контентом, визуалом, продвижением и отчётностью. Не сводится к графику публикаций.
+                </p>
+                <p class="font-body text-base md:text-lg text-slate-700 max-w-3xl mx-auto">
+                    Вы получаете цельную систему роста: позиционирование, контент, визуал, продвижение и аналитика для бизнеса, блогеров и онлайн-школ в России и СНГ.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 md:gap-10">
+                <!-- Карточка 1 -->
+                <article class="group relative rounded-2xl border-4 border-blue bg-white p-8 transition-transform duration-300 hover:-translate-y-2 shadow-[12px_12px_0px_0px_#3B82F6] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-12 -top-12 w-40 h-40 bg-blue opacity-10 rounded-full transition-transform duration-500 group-hover:scale-150 pointer-events-none"></div>
+                    
+                    <div class="flex justify-between items-start mb-8 relative z-10">
+                        <div class="w-14 h-14 rounded-full border-4 border-blue bg-white text-blue flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#3B82F6]">
+                            01
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-heading font-black text-2xl text-dark mb-4 relative z-10">Стратегия и позиционирование</h3>
+                    <p class="font-body text-slate-700 text-lg mb-8 flex-grow relative z-10 font-medium">
+                        Формируем архитектуру контента, смыслы бренда и понятную воронку, чтобы вас считывали за первые секунды.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 relative z-10 mt-auto">
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Единая стратегия</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Фокус бренда</span>
+                    </div>
+                </article>
+
+                <!-- Карточка 2 -->
+                <article class="group relative rounded-2xl border-4 border-purple bg-white p-8 transition-transform duration-300 hover:-translate-y-2 shadow-[12px_12px_0px_0px_#8B5CF6] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-12 -top-12 w-40 h-40 bg-purple opacity-10 rounded-full transition-transform duration-500 group-hover:scale-150 pointer-events-none"></div>
+                    
+                    <div class="flex justify-between items-start mb-8 relative z-10">
+                        <div class="w-14 h-14 rounded-full border-4 border-purple bg-white text-purple flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#8B5CF6]">
+                            02
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-heading font-black text-2xl text-dark mb-4 relative z-10">Контент и визуальная система</h3>
+                    <p class="font-body text-slate-700 text-lg mb-8 flex-grow relative z-10 font-medium">
+                        Создаем контент, который объясняет ценность продукта и усиливает доверие через единый визуальный стиль.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 relative z-10 mt-auto">
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Контент без хаоса</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Сильный визуал</span>
+                    </div>
+                </article>
+
+                <!-- Карточка 3 -->
+                <article class="group relative rounded-2xl border-4 border-green bg-white p-8 transition-transform duration-300 hover:-translate-y-2 shadow-[12px_12px_0px_0px_#10B981] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-12 -top-12 w-40 h-40 bg-green opacity-10 rounded-full transition-transform duration-500 group-hover:scale-150 pointer-events-none"></div>
+                    
+                    <div class="flex justify-between items-start mb-8 relative z-10">
+                        <div class="w-14 h-14 rounded-full border-4 border-green bg-white text-green flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#10B981]">
+                            03
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-heading font-black text-2xl text-dark mb-4 relative z-10">Продвижение и трафик</h3>
+                    <p class="font-body text-slate-700 text-lg mb-8 flex-grow relative z-10 font-medium">
+                        Запускаем гипотезы, тестируем креативы и приводим целевую аудиторию через таргетированную рекламу.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 relative z-10 mt-auto">
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Рост лидов</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Целевой трафик</span>
+                    </div>
+                </article>
+
+                <!-- Карточка 4 -->
+                <article class="group relative rounded-2xl border-4 border-amber-500 bg-white p-8 transition-transform duration-300 hover:-translate-y-2 shadow-[12px_12px_0px_0px_#F59E0B] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-12 -top-12 w-40 h-40 bg-amber-500 opacity-10 rounded-full transition-transform duration-500 group-hover:scale-150 pointer-events-none"></div>
+                    
+                    <div class="flex justify-between items-start mb-8 relative z-10">
+                        <div class="w-14 h-14 rounded-full border-4 border-amber-500 bg-white text-amber-500 flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#F59E0B]">
+                            04
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-heading font-black text-2xl text-dark mb-4 relative z-10">Аналитика и отчетность</h3>
+                    <p class="font-body text-slate-700 text-lg mb-8 flex-grow relative z-10 font-medium">
+                        Измеряем результат, считаем ROI и улучшаем метрики. SMM работает как управляемая система, а не лотерея.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 relative z-10 mt-auto">
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Прозрачные цифры</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Управляемый результат</span>
+                    </div>
+                </article>
+
+                <!-- Карточка 5 -->
+                <article class="group relative rounded-2xl border-4 border-rose-500 bg-white p-8 transition-transform duration-300 hover:-translate-y-2 shadow-[12px_12px_0px_0px_#F43F5E] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-12 -top-12 w-40 h-40 bg-rose-500 opacity-10 rounded-full transition-transform duration-500 group-hover:scale-150 pointer-events-none"></div>
+                    
+                    <div class="flex justify-between items-start mb-8 relative z-10">
+                        <div class="w-14 h-14 rounded-full border-4 border-rose-500 bg-white text-rose-500 flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#F43F5E]">
+                            05
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-heading font-black text-2xl text-dark mb-4 relative z-10">Автоматизация и воронки</h3>
+                    <p class="font-body text-slate-700 text-lg mb-8 flex-grow relative z-10 font-medium">
+                        Внедряем чат-ботов, CRM и автоворонки для прогрева аудитории и снижения нагрузки на отдел продаж.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 relative z-10 mt-auto">
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Чат-боты</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Автоворонки</span>
+                    </div>
+                </article>
+
+                <!-- Карточка 6 -->
+                <article class="group relative rounded-2xl border-4 border-cyan-500 bg-white p-8 transition-transform duration-300 hover:-translate-y-2 shadow-[12px_12px_0px_0px_#06B6D4] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-12 -top-12 w-40 h-40 bg-cyan-500 opacity-10 rounded-full transition-transform duration-500 group-hover:scale-150 pointer-events-none"></div>
+                    
+                    <div class="flex justify-between items-start mb-8 relative z-10">
+                        <div class="w-14 h-14 rounded-full border-4 border-cyan-500 bg-white text-cyan-500 flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#06B6D4]">
+                            06
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-heading font-black text-2xl text-dark mb-4 relative z-10">Управление репутацией</h3>
+                    <p class="font-body text-slate-700 text-lg mb-8 flex-grow relative z-10 font-medium">
+                        Работаем с отзывами, формируем лояльное комьюнити вокруг бренда и повышаем LTV клиентов.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 relative z-10 mt-auto">
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Лояльность</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark text-dark font-mono text-xs font-bold shadow-game">Комьюнити</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 4: ПРОБЛЕМА И ДЛЯ КОГО -->
+    <section id="problem-target" class="w-full py-24 md:py-28 px-4 md:px-8 section-grid-bg border-t-4 border-dark relative overflow-hidden">
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- ПРОБЛЕМА -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <div class="inline-block px-4 py-2 border-2 border-dark bg-rose-100 text-rose-700 font-mono text-xs font-bold mb-4 shadow-solid-sm transform rotate-1">
+                        ЗНАКОМАЯ СИТУАЦИЯ?
+                    </div>
+                    <h2 class="font-heading font-black text-4xl md:text-6xl text-dark mb-5">
+                        Соцсети ведутся, но<br><span class="text-rose-600">результата нет</span>
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Pain 1 -->
+                    <div class="bg-white border-4 border-dark p-6 shadow-[6px_6px_0px_0px_#111] transform hover:-translate-y-1 transition-transform">
+                        <div class="w-10 h-10 bg-rose-100 border-2 border-dark rounded-full flex items-center justify-center text-rose-600 font-black text-xl mb-4">!</div>
+                        <h3 class="font-heading font-bold text-xl text-dark mb-2">Контент ради контента</h3>
+                        <p class="font-body text-slate-700 font-medium">Случайные посты и рилсы, которые собирают лайки, но не связаны с воронкой продаж.</p>
+                    </div>
+                    <!-- Pain 2 -->
+                    <div class="bg-white border-4 border-dark p-6 shadow-[6px_6px_0px_0px_#111] transform hover:-translate-y-1 transition-transform">
+                        <div class="w-10 h-10 bg-rose-100 border-2 border-dark rounded-full flex items-center justify-center text-rose-600 font-black text-xl mb-4">!</div>
+                        <h3 class="font-heading font-bold text-xl text-dark mb-2">Слепая аналитика</h3>
+                        <p class="font-body text-slate-700 font-medium">Непонятно, откуда приходят клиенты, сколько стоит лид и окупается ли вообще SMM.</p>
+                    </div>
+                    <!-- Pain 3 -->
+                    <div class="bg-white border-4 border-dark p-6 shadow-[6px_6px_0px_0px_#111] transform hover:-translate-y-1 transition-transform">
+                        <div class="w-10 h-10 bg-rose-100 border-2 border-dark rounded-full flex items-center justify-center text-rose-600 font-black text-xl mb-4">!</div>
+                        <h3 class="font-heading font-bold text-xl text-dark mb-2">Слабое позиционирование</h3>
+                        <p class="font-body text-slate-700 font-medium">Вы сливаетесь с конкурентами. Клиенту неясно, почему он должен купить именно у вас.</p>
+                    </div>
+                    <!-- Pain 4 -->
+                    <div class="bg-white border-4 border-dark p-6 shadow-[6px_6px_0px_0px_#111] transform hover:-translate-y-1 transition-transform">
+                        <div class="w-10 h-10 bg-rose-100 border-2 border-dark rounded-full flex items-center justify-center text-rose-600 font-black text-xl mb-4">!</div>
+                        <h3 class="font-heading font-bold text-xl text-dark mb-2">Потерянные заявки</h3>
+                        <p class="font-body text-slate-700 font-medium">Пишут в директ, менеджер отвечает долго, нет CRM — горячие лиды просто уходят.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- РЕШЕНИЕ И ДЛЯ КОГО -->
+            <div class="bg-dark text-white border-4 border-dark rounded-3xl p-8 md:p-12 shadow-[12px_12px_0px_0px_#FF8A3D] relative">
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-amber border-4 border-dark rounded-full flex items-center justify-center transform rotate-12 shadow-solid z-20">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" class="w-10 h-10"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+
+                <div class="max-w-3xl mb-12">
+                    <h2 class="font-heading font-black text-3xl md:text-5xl mb-4">
+                        FlowPilot превращает хаос в систему.
+                    </h2>
+                    <p class="font-body text-lg md:text-xl text-gray-300 font-medium">
+                        Мы забираем на себя всю головную боль: от стратегии до аналитики. Вы получаете прозрачный процесс и рост целевых заявок.
+                    </p>
+                </div>
+
+                <h3 class="font-heading font-bold text-xl text-amber mb-6 uppercase tracking-wider">Для кого мы это строим:</h3>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-8" id="audience-cards">
+                    <div class="aud-card active cursor-pointer border-4 p-6 transition-all duration-300 transform -rotate-1 hover:-translate-y-1">
+                        <h4 class="font-heading font-black text-xl mb-2">Предприниматели и МСБ</h4>
+                        <p class="font-body text-sm font-bold aud-desc transition-colors duration-300">Нужен стабильный поток лидов и узнаваемость бренда без микроменеджмента.</p>
+                    </div>
+                    <div class="aud-card cursor-pointer border-4 p-6 transition-all duration-300 transform rotate-1 hover:-translate-y-1">
+                        <h4 class="font-heading font-black text-xl mb-2">Блогеры и личные бренды</h4>
+                        <p class="font-body text-sm font-bold aud-desc transition-colors duration-300">Нужна монетизация аудитории, качественный продакшн и рост охватов.</p>
+                    </div>
+                    <div class="aud-card cursor-pointer border-4 p-6 transition-all duration-300 transform -rotate-1 hover:-translate-y-1">
+                        <h4 class="font-heading font-black text-xl mb-2">Онлайн-школы и эксперты</h4>
+                        <p class="font-body text-sm font-bold aud-desc transition-colors duration-300">Нужны прогревы, автоворонки и системный контент для запусков.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-6 border-t-2 border-gray-700">
+                    <span class="font-body font-bold text-gray-400 text-sm mr-2">Также работаем с:</span>
+                    <span class="px-3 py-1 border-2 border-gray-600 rounded-full text-xs font-mono font-bold text-gray-300">E-commerce</span>
+                    <span class="px-3 py-1 border-2 border-gray-600 rounded-full text-xs font-mono font-bold text-gray-300">Локальные бренды</span>
+                    <span class="px-3 py-1 border-2 border-gray-600 rounded-full text-xs font-mono font-bold text-gray-300">Агентства</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 5: ТАРИФЫ И ФОРМАТЫ -->
+    <section id="pricing" class="w-full py-24 md:py-28 px-4 md:px-8 section-grid-bg relative overflow-hidden border-t-4 border-dark">
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-2 border-2 border-dark bg-blue text-white font-mono text-xs font-bold mb-4 shadow-solid-sm transform rotate-1">
+                    ТАРИФЫ И ФОРМАТЫ
+                </div>
+                <h2 class="font-heading font-black text-4xl md:text-6xl text-dark mb-5">
+                    Контент и автоматизация
+                </h2>
+                <p class="font-body text-lg md:text-xl text-slate-700 max-w-3xl mx-auto font-medium">
+                    Дешевле, чем нанимать отдельного SMM-менеджера, копирайтера, дизайнера и no-code специалиста на каждую площадку. Мы собираем это в единую систему.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Тариф 1: Старт -->
+                <div class="group bg-white border-4 border-dark rounded-3xl p-8 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-2 shadow-[8px_8px_0px_0px_#3B82F6] hover:shadow-[12px_12px_0px_0px_#3B82F6]">
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue opacity-10 rounded-full blur-2xl transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <h3 class="font-heading font-black text-3xl text-dark mb-2">Старт</h3>
+                    <div class="font-heading font-black text-3xl md:text-4xl text-blue mb-2 whitespace-nowrap">от 75 000 ₽<span class="text-lg text-slate-500">/мес</span></div>
+                    <p class="font-mono text-sm font-bold text-slate-500 mb-6 pb-6 border-b-2 border-slate-100">Блог + 2-3 площадки (VK, Дзен, Pinterest)</p>
+                    
+                    <ul class="space-y-4 font-body text-slate-700 font-medium flex-grow mb-8 relative z-10">
+                        <li class="flex items-start gap-3"><span class="text-blue font-bold">✓</span> Контент под нишу</li>
+                        <li class="flex items-start gap-3"><span class="text-blue font-bold">✓</span> Уникальные изображения под бренд</li>
+                        <li class="flex items-start gap-3"><span class="text-blue font-bold">✓</span> Базовая подготовка к автопостингу</li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600 mt-4 bg-blue/10 p-4 rounded-xl border border-blue/20">
+                            <span class="font-bold text-blue">УТП:</span> Вы перестаете каждый раз думать, что сегодня публиковать.
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 bg-white border-4 border-dark text-dark font-heading font-black uppercase tracking-wider transition-colors duration-300 rounded-xl shadow-solid-sm group-hover:bg-blue group-hover:text-white group-hover:border-blue">Обсудить формат</button>
+                </div>
+
+                <!-- Тариф 2: Система трафика (Оптимально) -->
+                <div class="group bg-white border-4 border-purple rounded-3xl p-8 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-2 shadow-[8px_8px_0px_0px_#8B5CF6] hover:shadow-[12px_12px_0px_0px_#8B5CF6] transform md:-translate-y-4 md:hover:-translate-y-6">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 bg-purple text-white font-mono font-bold text-xs px-4 py-1 rounded-b-xl border-x-4 border-b-4 border-purple z-20">ОПТИМАЛЬНО</div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-purple opacity-10 rounded-full blur-2xl transition-opacity duration-300 group-hover:opacity-30"></div>
+                    
+                    <h3 class="font-heading font-black text-3xl text-dark mb-2 mt-4">Система трафика</h3>
+                    <div class="font-heading font-black text-3xl md:text-4xl text-purple mb-2 whitespace-nowrap">от 100 000 ₽<span class="text-lg text-slate-500">/мес</span></div>
+                    <p class="font-mono text-sm font-bold text-slate-500 mb-6 pb-6 border-b-2 border-slate-100">Контент + 4-5 площадок</p>
+                    
+                    <ul class="space-y-4 font-body text-slate-700 font-medium flex-grow mb-8 relative z-10">
+                        <li class="flex items-start gap-3"><span class="text-purple font-bold">✓</span> Адаптация под каналы</li>
+                        <li class="flex items-start gap-3"><span class="text-purple font-bold">✓</span> Настройка автопостинга</li>
+                        <li class="flex items-start gap-3"><span class="text-purple font-bold">✓</span> Контент-ритм и базовые отчеты</li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600 mt-4 bg-purple/10 p-4 rounded-xl border border-purple/20">
+                            <span class="font-bold text-purple">УТП:</span> Один смысл масштабируется на все площадки автоматически.
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 bg-purple border-4 border-dark text-white font-heading font-black uppercase tracking-wider transition-colors duration-300 rounded-xl shadow-solid-sm group-hover:bg-dark group-hover:border-dark">Обсудить формат</button>
+                </div>
+
+                <!-- Тариф 3: Под ключ -->
+                <div class="group bg-white border-4 border-dark rounded-3xl p-8 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-2 shadow-[8px_8px_0px_0px_#10B981] hover:shadow-[12px_12px_0px_0px_#10B981]">
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-green opacity-10 rounded-full blur-2xl transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <h3 class="font-heading font-black text-3xl text-dark mb-2">Под ключ</h3>
+                    <div class="font-heading font-black text-3xl md:text-4xl text-green mb-2 whitespace-nowrap">от 150 000 ₽<span class="text-lg text-slate-500">/мес</span></div>
+                    <p class="font-mono text-sm font-bold text-slate-500 mb-6 pb-6 border-b-2 border-slate-100">До 7 площадок + Автоматизация</p>
+                    
+                    <ul class="space-y-4 font-body text-slate-700 font-medium flex-grow mb-8 relative z-10">
+                        <li class="flex items-start gap-3"><span class="text-green font-bold">✓</span> Make-сценарии и автопостинг</li>
+                        <li class="flex items-start gap-3"><span class="text-green font-bold">✓</span> Связки CRM / Telegram / Таблицы</li>
+                        <li class="flex items-start gap-3"><span class="text-green font-bold">✓</span> Полная отчетность и визуалы</li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600 mt-4 bg-green/10 p-4 rounded-xl border border-green/20">
+                            <span class="font-bold text-green">УТП:</span> FlowPilot закрывает контент и процесс как внешний операционный контур.
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 bg-white border-4 border-dark text-dark font-heading font-black uppercase tracking-wider transition-colors duration-300 rounded-xl shadow-solid-sm group-hover:bg-green group-hover:text-white group-hover:border-green">Обсудить формат</button>
+                </div>
+            </div>
+
+            <!-- Флагманский тариф (Широкий) -->
+            <div class="group bg-dark text-white border-4 border-dark rounded-3xl p-8 md:p-10 shadow-[12px_12px_0px_0px_#FF8A3D] hover:shadow-[16px_16px_0px_0px_#FF8A3D] transition-all duration-300 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden transform hover:-translate-y-1">
+                <div class="absolute -top-20 -left-20 w-64 h-64 bg-amber opacity-20 rounded-full blur-3xl transition-opacity duration-300 group-hover:opacity-40"></div>
+                
+                <div class="flex-1 relative z-10">
+                    <div class="inline-block px-3 py-1 bg-amber text-dark font-mono text-xs font-bold mb-4 rounded-full">ФЛАГМАН</div>
+                    <h3 class="font-heading font-black text-3xl md:text-4xl mb-3">Медиа-система</h3>
+                    <p class="font-body text-gray-300 font-medium text-lg mb-4 max-w-2xl">
+                        Стратегия, производство контента, мультиплатформенный постинг, сложная автоматизация, аналитика и регулярные улучшения. Соцсети становятся полноценной системой роста.
+                    </p>
+                    <p class="font-mono text-sm text-amber font-bold">УТП: Внешняя SMM-редакция с выстроенными процессами.</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end relative z-10 min-w-[250px]">
+                    <div class="font-heading font-black text-4xl md:text-5xl text-white mb-2 whitespace-nowrap">от 250 000 ₽</div>
+                    <div class="font-mono text-sm text-gray-400 mb-6">в месяц</div>
+                    <button type="button" onclick="document.getElementById('lead-form')?.scrollIntoView({behavior:'smooth',block:'start'})" class="w-full md:w-auto px-8 py-4 bg-amber text-dark font-heading font-black uppercase tracking-wider transition-colors duration-300 rounded-xl shadow-solid-sm group-hover:bg-white group-hover:text-dark">Оставить заявку</button>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="font-mono text-xs text-slate-500 max-w-3xl mx-auto">
+                    * Пакеты стартуют от 75 000 ₽. Рекламный бюджет, съемки, платные сервисы, CRM-лицензии и большой продакшн считаются отдельно.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 6: СРАВНЕНИЕ + ПРОЦЕСС + ТЕХНОЛОГИИ -->
+    <section id="how-it-works" class="w-full py-24 md:py-32 px-4 md:px-8 section-grid-bg relative overflow-hidden border-t-4 border-dark">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-2 border-2 border-dark bg-blue text-white font-mono text-xs font-bold mb-4 shadow-solid-sm transform -rotate-1">
+                    АРХИТЕКТУРА РОСТА
+                </div>
+                <h2 class="font-heading font-black text-4xl md:text-6xl text-dark mb-5">
+                    Не просто SMM. <br><span class="text-blue">Система роста.</span>
+                </h2>
+                <p class="font-body text-lg md:text-xl text-slate-700 max-w-3xl mx-auto font-medium">
+                    Один контур: стратегия, контент, автоматизация и аналитика. Без хаоса и случайных действий.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-20">
+                <div class="compare-card bg-white/90 border-4 border-slate-300 rounded-3xl p-8 shadow-[8px_8px_0px_0px_#CBD5E1] live-card backdrop-blur-sm">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-heading font-black text-2xl text-slate-500 flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-full bg-slate-200 border-2 border-slate-400 text-slate-500 flex items-center justify-center text-xs">!</span>
+                            Типичный SMM
+                        </h3>
+                        <span class="font-mono text-xs text-rose-600 bg-rose-100 px-3 py-1 rounded-full border-2 border-rose-200">Хаос</span>
+                    </div>
+                    <ul class="space-y-4 font-body text-slate-600 font-medium">
+                        <li class="compare-item flex items-start gap-3"><span class="compare-bullet text-rose-500 font-bold mt-1">-</span> Публикации без системы и ритма</li>
+                        <li class="compare-item flex items-start gap-3"><span class="compare-bullet text-rose-500 font-bold mt-1">-</span> Охваты без связи с продажами</li>
+                        <li class="compare-item flex items-start gap-3"><span class="compare-bullet text-rose-500 font-bold mt-1">-</span> Лиды теряются в директе и чатах</li>
+                        <li class="compare-item flex items-start gap-3"><span class="compare-bullet text-rose-500 font-bold mt-1">-</span> Отчеты есть, решений нет</li>
+                    </ul>
+                    <div class="mt-7 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-[11px] font-mono font-bold border-2 border-slate-300 rounded-full bg-slate-100 text-slate-500">ручной режим</span>
+                        <span class="px-2.5 py-1 text-[11px] font-mono font-bold border-2 border-slate-300 rounded-full bg-slate-100 text-slate-500">без CRM</span>
+                        <span class="px-2.5 py-1 text-[11px] font-mono font-bold border-2 border-slate-300 rounded-full bg-slate-100 text-slate-500">реактивно</span>
+                    </div>
+                </div>
+
+                <div class="compare-card bg-gradient-to-br from-[#0B1220] via-[#101827] to-[#0F172A] text-white border-4 border-blue rounded-3xl p-8 shadow-[10px_10px_0px_0px_#3B82F6] live-card live-card-delay-1">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-heading font-black text-2xl flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-full bg-blue border-2 border-white text-white flex items-center justify-center text-xs">+</span>
+                            FlowPilot
+                        </h3>
+                        <span class="font-mono text-xs text-blue bg-white px-3 py-1 rounded-full border-2 border-blue live-chip">Система</span>
+                    </div>
+                    <ul class="space-y-4 font-body text-gray-200 font-medium">
+                        <li class="compare-item flex items-start gap-3"><span class="compare-bullet text-blue font-bold mt-1">+</span> Контент-план на основе спроса</li>
+                        <li class="compare-item flex items-start gap-3"><span class="compare-bullet text-blue font-bold mt-1">+</span> Воронка из контента в заявки</li>
+                        <li class="compare-item flex items-start gap-3"><span class="compare-bullet text-blue font-bold mt-1">+</span> Автоматизация передачи лида в CRM</li>
+                        <li class="compare-item flex items-start gap-3"><span class="compare-bullet text-blue font-bold mt-1">+</span> Понятная аналитика и решения</li>
+                    </ul>
+                    <div class="mt-7 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-[11px] font-mono font-bold border-2 border-blue/40 rounded-full bg-blue/15 text-blue-100">автопостинг</span>
+                        <span class="px-2.5 py-1 text-[11px] font-mono font-bold border-2 border-blue/40 rounded-full bg-blue/15 text-blue-100">AI + CRM</span>
+                        <span class="px-2.5 py-1 text-[11px] font-mono font-bold border-2 border-blue/40 rounded-full bg-blue/15 text-blue-100">KPI / ROMI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row items-end justify-between mb-10 gap-4">
+                    <h3 class="font-heading font-black text-3xl md:text-4xl text-dark">Протокол запуска</h3>
+                    <div class="font-mono text-xs text-blue border-2 border-blue px-4 py-2 rounded-lg bg-white shadow-solid-sm">
+                        Старт: 5-7 дней
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+                    <div class="hidden lg:block process-flow-line"></div>
+                    <div class="step-card group bg-white border-4 border-dark rounded-2xl p-6 shadow-solid-sm hover:-translate-y-1 hover:bg-amber transition-all live-card">
+                        <div class="step-icon w-10 h-10 bg-amber text-dark border-2 border-dark rounded-full flex items-center justify-center font-mono text-sm font-black mb-4 group-hover:bg-white group-hover:text-dark">01</div>
+                        <h4 class="font-heading font-bold text-xl text-dark mb-2 group-hover:text-dark">Аудит и стратегия</h4>
+                        <p class="font-body text-sm text-slate-600 group-hover:text-dark/90">Анализируем рынок, собираем семантику и фиксируем позиционирование.</p>
+                    </div>
+                    <div class="step-card group bg-white border-4 border-dark rounded-2xl p-6 shadow-solid-sm hover:-translate-y-1 hover:bg-blue transition-all live-card live-card-delay-1">
+                        <div class="step-icon w-10 h-10 bg-blue text-white border-2 border-dark rounded-full flex items-center justify-center font-mono text-sm font-black mb-4 group-hover:bg-white group-hover:text-blue">02</div>
+                        <h4 class="font-heading font-bold text-xl text-dark mb-2 group-hover:text-white">Упаковка и визуал</h4>
+                        <p class="font-body text-sm text-slate-600 group-hover:text-blue-100">Оформляем площадки, шаблоны и коммуникацию в едином стиле.</p>
+                    </div>
+                    <div class="step-card group bg-white border-4 border-dark rounded-2xl p-6 shadow-solid-sm hover:-translate-y-1 hover:bg-purple transition-all live-card live-card-delay-2">
+                        <div class="step-icon w-10 h-10 bg-purple text-white border-2 border-dark rounded-full flex items-center justify-center font-mono text-sm font-black mb-4 group-hover:bg-white group-hover:text-purple">03</div>
+                        <h4 class="font-heading font-bold text-xl text-dark mb-2 group-hover:text-white">Контент и автоматизация</h4>
+                        <p class="font-body text-sm text-slate-600 group-hover:text-purple-100">Запускаем производство контента и сценарии автопостинга.</p>
+                    </div>
+                    <div class="step-card group bg-white border-4 border-dark rounded-2xl p-6 shadow-solid-sm hover:-translate-y-1 hover:bg-blue transition-all live-card live-card-delay-3">
+                        <div class="step-icon w-10 h-10 bg-white text-blue border-2 border-dark rounded-full flex items-center justify-center font-mono text-sm font-black mb-4 group-hover:bg-white group-hover:text-blue">04</div>
+                        <h4 class="font-heading font-bold text-xl text-dark mb-2 group-hover:text-white">Трафик и лиды</h4>
+                        <p class="font-body text-sm text-slate-600 group-hover:text-blue-100">Включаем продвижение и ежедневно улучшаем показатели по KPI.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border-4 border-dark rounded-3xl overflow-hidden shadow-[10px_10px_0px_0px_#111]">
+                <div class="bg-dark px-4 py-3 border-b-4 border-dark flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-rose-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-amber"></div>
+                    <div class="w-3 h-3 rounded-full bg-green"></div>
+                    <div class="ml-4 font-mono text-xs text-gray-300">flowpilot-stack</div>
+                </div>
+                <div class="p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="max-w-lg">
+                        <h3 class="font-heading font-black text-2xl text-dark mb-3">Технологии в рабочем контуре</h3>
+                        <p class="font-body text-slate-700 mb-5 font-medium">
+                            AI и no-code инструменты ускоряют процесс и снимают ручную рутину. При этом стратегия и контроль качества остаются на стороне команды FlowPilot.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-bgLight border-2 border-dark rounded text-dark font-mono text-xs font-bold">Make.com</span>
+                            <span class="px-3 py-1 bg-bgLight border-2 border-dark rounded text-dark font-mono text-xs font-bold">n8n</span>
+                            <span class="px-3 py-1 bg-bgLight border-2 border-dark rounded text-dark font-mono text-xs font-bold">OpenAI / Claude</span>
+                            <span class="px-3 py-1 bg-bgLight border-2 border-dark rounded text-dark font-mono text-xs font-bold">CRM</span>
+                            <span class="px-3 py-1 bg-bgLight border-2 border-dark rounded text-dark font-mono text-xs font-bold">Telegram API</span>
+                        </div>
+                    </div>
+                    <div class="hidden md:block bg-bgLight p-4 rounded-xl border-2 border-dark font-mono text-xs text-slate-700 w-full max-w-sm">
+                        <div class="text-blue mb-1">// Автоматизация обработки лида</div>
+                        <div>lead -> CRM -> уведомление менеджера -> ответ клиенту</div>
+                        <div class="mt-2 text-slate-500">Без потери заявок и ручных копирований.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- БЛОК 7: О КОМПАНИИ -->
+    <section id="about-company" class="w-full py-24 md:py-32 px-4 md:px-8 section-grid-bg relative overflow-hidden border-t-4 border-dark">
+        <div class="absolute top-8 right-8 md:top-12 md:right-16 w-24 h-24 md:w-32 md:h-32 border-4 border-dark rounded-full bg-amber/20 pointer-events-none hidden sm:block" aria-hidden="true"></div>
+        <div class="absolute bottom-16 left-6 w-16 h-16 border-4 border-blue bg-blue/10 rotate-12 pointer-events-none hidden md:block" aria-hidden="true"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-14 md:mb-20">
+                <div class="inline-block px-4 py-2 border-2 border-dark bg-dark text-white font-mono text-xs font-bold mb-5 shadow-solid-sm transform -rotate-1">
+                    О КОМПАНИИ
+                </div>
+                <h2 class="font-heading font-black text-4xl md:text-6xl text-dark mb-5 leading-[1.05] max-w-4xl mx-auto">
+                    Founder-led команда,<br><span class="text-blue">которая растёт с проектом</span>
+                </h2>
+                <p class="font-body text-lg md:text-xl text-slate-700 max-w-3xl mx-auto font-medium leading-relaxed">
+                    FlowPilot основан в 2025 году. Работаем с бизнесом, блогерами и онлайн-школами в России и СНГ: не «посты по графику», а SMM-система под вашу нишу и темп.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-10 md:mb-14">
+                <div class="about-stat bg-white border-4 border-dark rounded-2xl p-4 md:p-5 shadow-[4px_4px_0px_0px_#3B82F6] text-center">
+                    <p class="font-heading font-black text-2xl md:text-3xl text-blue mb-1">2025</p>
+                    <p class="font-mono text-[10px] md:text-xs font-bold uppercase tracking-wide text-slate-500">Год основания</p>
+                </div>
+                <div class="about-stat bg-white border-4 border-dark rounded-2xl p-4 md:p-5 shadow-[4px_4px_0px_0px_#FF8A3D] text-center">
+                    <p class="font-heading font-black text-lg md:text-2xl text-dark mb-1 leading-tight">Founder-led</p>
+                    <p class="font-mono text-[10px] md:text-xs font-bold uppercase tracking-wide text-slate-500">Стратегия у основателя</p>
+                </div>
+                <div class="about-stat bg-white border-4 border-dark rounded-2xl p-4 md:p-5 shadow-[4px_4px_0px_0px_#8B5CF6] text-center">
+                    <p class="font-heading font-black text-lg md:text-2xl text-purple mb-1 leading-tight">RU &amp; СНГ</p>
+                    <p class="font-mono text-[10px] md:text-xs font-bold uppercase tracking-wide text-slate-500">Онлайн по всем регионам</p>
+                </div>
+                <div class="about-stat bg-white border-4 border-dark rounded-2xl p-4 md:p-5 shadow-[4px_4px_0px_0px_#10B981] text-center">
+                    <p class="font-heading font-black text-lg md:text-2xl text-green mb-1 leading-tight">Демо-разборы</p>
+                    <p class="font-mono text-[10px] md:text-xs font-bold uppercase tracking-wide text-slate-500">Без фейковых кейсов</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-6 md:gap-8 mb-10 md:mb-14 items-stretch">
+                <aside class="about-founder-card lg:col-span-5 relative border-4 border-dark rounded-3xl p-6 md:p-8 shadow-[12px_12px_0px_0px_#FF8A3D] flex flex-col overflow-hidden">
+                    <div class="absolute -right-16 -top-16 w-48 h-48 bg-amber/15 rounded-full pointer-events-none" aria-hidden="true"></div>
+                    <div class="absolute top-4 right-4 px-3 py-1 border-2 border-dark bg-amber font-mono text-[10px] font-black uppercase tracking-wider rotate-3 shadow-solid-sm">Lead</div>
+
+                    <p class="font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-6 relative z-10">Кто ведёт проект</p>
+
+                    <div class="flex items-start gap-4 mb-6 pb-6 border-b-4 border-dark relative z-10">
+                        <div class="about-founder-avatar" aria-hidden="true">А</div>
+                        <div class="pt-1">
+                            <p class="font-heading font-black text-2xl md:text-3xl text-dark leading-none">Александр</p>
+                            <p class="font-mono text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wide mt-2">Основатель · стратегия и качество</p>
+                        </div>
+                    </div>
+
+                    <p class="font-body text-sm md:text-base text-slate-700 leading-relaxed font-medium mb-6 relative z-10">
+                        Лично ведёт первый разбор и задаёт направление SMM-системы. Подключает специалистов под задачу, без шаблонного КП и давления на «дорогой пакет».
+                    </p>
+
+                    <div class="relative z-10 mb-6">
+                        <p class="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500 mb-3">Роли подключаются по задаче</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="about-role-pill"><span class="about-role-dot bg-blue"></span>SMM</span>
+                            <span class="about-role-pill"><span class="about-role-dot bg-purple"></span>Контент</span>
+                            <span class="about-role-pill"><span class="about-role-dot bg-green"></span>Дизайн</span>
+                            <span class="about-role-pill"><span class="about-role-dot bg-amber"></span>Трафик</span>
+                            <span class="about-role-pill"><span class="about-role-dot bg-yellow-400"></span>Аналитика</span>
+                            <span class="about-role-pill"><span class="about-role-dot bg-cyan-400"></span>Авто</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto relative z-10 p-4 md:p-5 border-4 border-dark bg-amber/15 rounded-2xl shadow-[3px_3px_0px_0px_#111]">
+                        <p class="font-body text-sm md:text-base text-dark leading-relaxed font-medium">
+                            «Сначала слушаем вашу задачу, потом предлагаем формат. Работаем по всей России и СНГ онлайн.»
+                        </p>
+                    </div>
+                    <p class="font-mono text-[10px] text-slate-400 mt-4 relative z-10">Без постановочных фото. Доверие через процесс.</p>
+                </aside>
+
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                    <div class="bg-white border-4 border-dark rounded-3xl p-6 md:p-8 shadow-[8px_8px_0px_0px_#3B82F6] relative overflow-hidden flex-1">
+                        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue/10 rounded-full pointer-events-none" aria-hidden="true"></div>
+                        <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-blue mb-3">Модель работы</p>
+                        <p class="font-body text-base md:text-lg text-slate-800 leading-relaxed font-medium mb-6 relative z-10">
+                            Команда не застывает на одном регламенте. Разбираем ниши, обновляем подходы к контенту, продвижению и аналитике, тестируем инструменты и переносим рабочие практики в ваш проект.
+                        </p>
+                        <div class="relative z-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-2">
+                            <div class="flex-1 px-4 py-3 border-4 border-dark bg-dark text-white rounded-xl text-center">
+                                <p class="font-mono text-[10px] font-bold uppercase text-amber mb-1">Шаг 1</p>
+                                <p class="font-heading font-bold text-sm">Разбор задачи</p>
+                            </div>
+                            <svg class="hidden sm:block w-8 h-4 shrink-0" viewBox="0 0 32 16" aria-hidden="true"><path class="about-flow-line" d="M0 8 H28 M24 4 L28 8 L24 12"/></svg>
+                            <div class="flex-1 px-4 py-3 border-4 border-dark bg-white rounded-xl text-center shadow-[3px_3px_0px_0px_#8B5CF6]">
+                                <p class="font-mono text-[10px] font-bold uppercase text-purple mb-1">Шаг 2</p>
+                                <p class="font-heading font-bold text-sm">Роли в системе</p>
+                            </div>
+                            <svg class="hidden sm:block w-8 h-4 shrink-0" viewBox="0 0 32 16" aria-hidden="true"><path class="about-flow-line" d="M0 8 H28 M24 4 L28 8 L24 12"/></svg>
+                            <div class="flex-1 px-4 py-3 border-4 border-dark bg-blue text-white rounded-xl text-center shadow-[3px_3px_0px_0px_#111]">
+                                <p class="font-mono text-[10px] font-bold uppercase text-amber mb-1">Шаг 3</p>
+                                <p class="font-heading font-bold text-sm">SMM-система</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="border-4 border-dark rounded-2xl p-5 bg-purple/5 shadow-[4px_4px_0px_0px_#8B5CF6]">
+                            <p class="font-heading font-black text-3xl text-purple mb-2">06</p>
+                            <p class="font-body text-sm text-slate-700 font-medium leading-snug">Ролей в экосистеме: от стратегии до автоматизации</p>
+                        </div>
+                        <div class="border-4 border-dark rounded-2xl p-5 bg-green/5 shadow-[4px_4px_0px_0px_#10B981]">
+                            <p class="font-heading font-black text-3xl text-green mb-2">1</p>
+                            <p class="font-body text-sm text-slate-700 font-medium leading-snug">Собеседник с полномочиями на старте, без «аккаунт-прокладки»</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-14 md:mb-16">
+                <article class="about-bento-card group relative rounded-2xl border-4 border-blue bg-white p-7 md:p-8 shadow-[10px_10px_0px_0px_#3B82F6] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-36 h-36 bg-blue opacity-10 rounded-full pointer-events-none"></div>
+                    <div class="w-14 h-14 rounded-full border-4 border-blue bg-white text-blue flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#3B82F6] mb-6 relative z-10">01</div>
+                    <h3 class="font-heading font-black text-xl md:text-2xl text-dark mb-3 relative z-10">Персональный lead</h3>
+                    <p class="font-body text-slate-700 text-base flex-grow relative z-10 font-medium leading-relaxed">
+                        Александр ведёт стратегию и первый разбор лично. Один собеседник с полномочиями, без цепочки менеджеров.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-6 relative z-10">
+                        <span class="px-3 py-1 bg-white border-2 border-dark font-mono text-xs font-bold shadow-game">Не прокладка</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark font-mono text-xs font-bold shadow-game">Прямой контакт</span>
+                    </div>
+                </article>
+                <article class="about-bento-card group relative rounded-2xl border-4 border-purple bg-white p-7 md:p-8 shadow-[10px_10px_0px_0px_#8B5CF6] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-36 h-36 bg-purple opacity-10 rounded-full pointer-events-none"></div>
+                    <div class="w-14 h-14 rounded-full border-4 border-purple bg-white text-purple flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#8B5CF6] mb-6 relative z-10">02</div>
+                    <h3 class="font-heading font-black text-xl md:text-2xl text-dark mb-3 relative z-10">Команда на практике</h3>
+                    <p class="font-body text-slate-700 text-base flex-grow relative z-10 font-medium leading-relaxed">
+                        SMM, визуал, продвижение и аналитика подключаются под роли. Wordstat, гипотезы, форматы площадок, автоматизация, отчётность.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-6 relative z-10">
+                        <span class="px-3 py-1 bg-white border-2 border-dark font-mono text-xs font-bold shadow-game">Обучение</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark font-mono text-xs font-bold shadow-game">Роли по задаче</span>
+                    </div>
+                </article>
+                <article class="about-bento-card group relative rounded-2xl border-4 border-amber bg-white p-7 md:p-8 shadow-[10px_10px_0px_0px_#FF8A3D] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-36 h-36 bg-amber opacity-15 rounded-full pointer-events-none"></div>
+                    <div class="w-14 h-14 rounded-full border-4 border-amber bg-white text-dark flex items-center justify-center font-heading font-black text-2xl shadow-[4px_4px_0px_0px_#FF8A3D] mb-6 relative z-10">03</div>
+                    <h3 class="font-heading font-black text-xl md:text-2xl text-dark mb-3 relative z-10">Честный подход</h3>
+                    <p class="font-body text-slate-700 text-base flex-grow relative z-10 font-medium leading-relaxed">
+                        Без выдуманных кейсов, накруток и обещаний продаж. Показываем процесс, демо-разборы и цифры, которые можно проверить.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-6 relative z-10">
+                        <span class="px-3 py-1 bg-white border-2 border-dark font-mono text-xs font-bold shadow-game">Прозрачность</span>
+                        <span class="px-3 py-1 bg-white border-2 border-dark font-mono text-xs font-bold shadow-game">Без хайпа</span>
+                    </div>
+                </article>
+            </div>
+
+            <div>
+                <div class="text-center mb-8 md:mb-10">
+                    <p class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-2">Чем отличаемся</p>
+                    <h3 class="font-heading font-black text-2xl md:text-4xl text-dark">Не фриланс и не «дешёвое SMM»</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8 items-end">
+                    <div class="about-compare-col bg-slate-100 border-4 border-slate-300 rounded-3xl p-6 md:p-8 opacity-80">
+                        <p class="font-mono text-xs font-bold uppercase text-slate-400 mb-4">Вариант A</p>
+                        <h4 class="font-heading font-black text-xl text-slate-500 mb-4">Фриланс</h4>
+                        <ul class="space-y-3 font-body text-sm text-slate-500">
+                            <li class="flex gap-2"><span class="text-slate-400 shrink-0">✕</span> Один исполнитель на узкую задачу</li>
+                            <li class="flex gap-2"><span class="text-slate-400 shrink-0">✕</span> Нет связки контент + трафик + аналитика</li>
+                            <li class="flex gap-2"><span class="text-slate-400 shrink-0">✕</span> Система не масштабируется</li>
+                        </ul>
+                    </div>
+                    <div class="about-compare-col bg-slate-100 border-4 border-slate-300 rounded-3xl p-6 md:p-8 opacity-80">
+                        <p class="font-mono text-xs font-bold uppercase text-slate-400 mb-4">Вариант B</p>
+                        <h4 class="font-heading font-black text-xl text-slate-500 mb-4">Дешёвое SMM</h4>
+                        <ul class="space-y-3 font-body text-sm text-slate-500">
+                            <li class="flex gap-2"><span class="text-slate-400 shrink-0">✕</span> Посты ради активности в ленте</li>
+                            <li class="flex gap-2"><span class="text-slate-400 shrink-0">✕</span> Без стратегии и Wordstat</li>
+                            <li class="flex gap-2"><span class="text-slate-400 shrink-0">✕</span> Менеджер без полномочий</li>
+                        </ul>
+                    </div>
+                    <div class="about-compare-col about-compare-col--winner relative bg-white border-4 border-dark rounded-3xl p-6 md:p-8 shadow-[12px_12px_0px_0px_#8B5CF6]">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-purple text-white font-mono text-[10px] font-bold uppercase border-2 border-dark rounded-full shadow-solid-sm whitespace-nowrap">FlowPilot</div>
+                        <p class="font-mono text-xs font-bold uppercase text-purple mb-4 mt-2">Ваш формат</p>
+                        <h4 class="font-heading font-black text-2xl text-dark mb-4">SMM-система роста</h4>
+                        <ul class="space-y-3 font-body text-sm md:text-base text-slate-700 font-medium">
+                            <li class="flex gap-2"><span class="text-purple font-bold shrink-0">✓</span> Founder-led: стратегия у основателя</li>
+                            <li class="flex gap-2"><span class="text-purple font-bold shrink-0">✓</span> Роли подключаются под задачу</li>
+                            <li class="flex gap-2"><span class="text-purple font-bold shrink-0">✓</span> Контент, визуал, трафик, аналитика в одной системе</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 8: ДОВЕРИЕ И FAQ -->
+    <section id="faq-trust" class="w-full py-16 md:py-24 px-4 md:px-8 lg:px-12 text-dark relative overflow-hidden border-t-4 border-dark">
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+        <div class="faq-trust-grid grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-16 xl:gap-x-24 gap-y-6 lg:gap-y-8 items-stretch">
+
+            <!-- Левая колонка: шапка -->
+            <div class="faq-trust-intro-left lg:col-start-1 lg:row-start-1">
+                <div class="inline-block px-4 py-2 border-2 border-dark bg-dark text-white font-mono text-xs font-bold mb-6 rounded-full">
+                    ПОЧЕМУ НАМ ДОВЕРЯЮТ
+                </div>
+                <h2 class="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-dark mb-6 leading-[1.05]">
+                    Прозрачность.<br><span class="text-blue">Система.</span><br>Результат.
+                </h2>
+                <p class="font-body text-slate-600 text-base md:text-lg leading-relaxed max-w-xl">
+                    Мы не даем пустых обещаний и не обещаем продажи без учета продукта. Строим предсказуемую SMM-систему, которой можно управлять: контент, визуал, продвижение и аналитика.
+                </p>
+            </div>
+
+            <!-- Правая колонка: шапка FAQ -->
+            <div class="faq-trust-intro-right lg:col-start-2 lg:row-start-1">
+                <h3 class="font-heading font-black text-3xl md:text-4xl lg:text-5xl text-dark mb-3 leading-tight">Частые вопросы про SMM и продвижение</h3>
+                <p class="font-body text-slate-600 text-sm md:text-base mb-0 lg:mb-0 leading-relaxed">Ответы про ведение соцсетей, маркетинг в соцсетях и контент-стратегию для VK, Telegram, MAX, Дзен, Pinterest, сайта и блога. Для бизнеса, блогеров и онлайн-школ в России и СНГ.</p>
+            </div>
+
+            <!-- Левая колонка: карточки -->
+            <div class="faq-trust-cards lg:col-start-1 lg:row-start-2 flex flex-col gap-4">
+                    <article class="trust-row p-5 md:p-6 bg-white border-2 border-dark rounded-2xl hover:bg-amber/10 transition-colors hover:shadow-[4px_4px_0px_0px_#111]">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="trust-row-num bg-amber text-dark">01</span>
+                            <h4 class="font-heading font-bold text-base md:text-lg text-dark leading-snug">Без фейковых гарантий в SMM</h4>
+                        </div>
+                        <p class="font-body text-sm md:text-base text-slate-700 leading-relaxed mb-3">FlowPilot отвечает за систему продвижения в соцсетях: целевой трафик, сильный контент, визуал и оцифрованную воронку до заявки. Мы не обещаем продажи без учёта продукта, цены, спроса и отдела продаж.</p>
+                        <p class="font-body text-sm text-slate-600 leading-relaxed">Для бизнеса, блогеров и онлайн-школ в России и СНГ это означает честный SMM: контент-стратегия, гипотезы в таргете и регулярная отчётность вместо «гарантии охватов» и накруток.</p>
+                    </article>
+                    <article class="trust-row p-5 md:p-6 bg-white border-2 border-dark rounded-2xl hover:bg-blue/10 transition-colors hover:shadow-[4px_4px_0px_0px_#111]">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="trust-row-num bg-blue text-white">02</span>
+                            <h4 class="font-heading font-bold text-base md:text-lg text-dark leading-snug">Founder-led SMM-команда</h4>
+                        </div>
+                        <p class="font-body text-sm md:text-base text-slate-700 leading-relaxed mb-3">Стратегию, первый разбор и контроль качества ведёт основатель. Вы общаетесь с человеком, который понимает нишу и может принимать решения, а не с джуниор-аккаунтом без полномочий.</p>
+                        <p class="font-body text-sm text-slate-600 leading-relaxed">Под задачу подключаются роли: контент, дизайн, продвижение VK и Telegram, аналитика и автоматизация заявок. Так устроено ведение соцсетей у SMM-компании, а не у фрилансера «на один канал».</p>
+                    </article>
+                    <article class="trust-row p-5 md:p-6 bg-white border-2 border-dark rounded-2xl hover:bg-purple/10 transition-colors hover:shadow-[4px_4px_0px_0px_#111]">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="trust-row-num bg-purple text-white">03</span>
+                            <h4 class="font-heading font-bold text-base md:text-lg text-dark leading-snug">Прозрачная аналитика маркетинга</h4>
+                        </div>
+                        <p class="font-body text-sm md:text-base text-slate-700 leading-relaxed mb-3">Вы видите, куда уходит рекламный бюджет, сколько стоит лид (CPL), какие форматы работают и как окупается маркетинг (ROMI). Отчёты привязаны к гипотезам, а не к «активности ради активности».</p>
+                        <p class="font-body text-sm text-slate-600 leading-relaxed">Связываем публикации в MAX, VK, Дзен, Pinterest и блоге с заявками в Telegram или CRM. UTM, воронка и метрики контента помогают улучшать SMM-систему каждый месяц.</p>
+                    </article>
+            </div>
+
+            <!-- Правая колонка: FAQ -->
+            <div class="faq-trust-faq lg:col-start-2 lg:row-start-2 flex flex-col gap-3 min-w-0">
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Что делает SMM-компания FlowPilot?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">FlowPilot помогает бизнесу, блогерам и онлайн-школам выстроить соцсети как систему роста. В работу входят стратегия, позиционирование, контент, визуал, продвижение, аналитика и связка публикаций с заявками в Telegram или CRM.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Чем FlowPilot отличается от обычного ведения соцсетей?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">Обычное SMM часто ограничивается публикациями. FlowPilot работает шире: помогает понять бренд, выстроить контент, связать соцсети с заявками и улучшать продвижение на основе аналитики с founder-led контролем.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">С каких площадок вы ведете соцсети?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">В приоритете MAX, VK, Telegram, сайт и блог на WordPress, Pinterest, Яндекс Дзен и Одноклассники. По запросу подключаем YouTube, TikTok, Threads и Instagram*. *Instagram запрещен на территории РФ (Meta Platforms Inc.).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Подходит ли FlowPilot для малого бизнеса?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">Да. FlowPilot подходит малому и среднему бизнесу, блогерам и онлайн-школам. Работаем как внешняя SMM-команда: стратегия, контент, визуал, продвижение и отчётность без найма отдельных специалистов.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Сколько стоит SMM сопровождение?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">FlowPilot Audit от 75 000 ₽, Brand Setup от 100 000 ₽, Content System от 150 000 ₽ в месяц, Creator Growth от 180 000 ₽ в месяц, SMM Growth от 200 000 ₽ в месяц, Full Media System от 300 000 ₽ в месяц.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Создаете ли вы статьи и фото без AI-маркеров?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">Да. Статьи для блога, Дзена и сайта, а также визуалы для соцсетей готовим под вашу нишу без технических AI-маркеров и водяных меток. Тексты проходят редакторскую доработку, что помогает продвижению.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Используете ли вы нейросети и автоматизацию?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">AI используется для ускорения идей, черновиков, анализа и отчетов. Make.com помогает связать формы, CRM, Telegram и таблицы. Стратегия и финальные тексты остаются под контролем команды. Продажи не гарантируем. ChatGPT является товарным знаком OpenAI, Inc.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Чем FlowPilot отличается от фрилансера или дешёвого SMM?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">Фрилансер закрывает узкую задачу: тексты, дизайн или редкие посты. FlowPilot даёт founder-led стратегию и подключает специалистов под роли: упаковка, контент, продвижение, аналитика. Вы платите за систему и процесс, а не только за количество публикаций.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Можно ли начать с аудита без долгого контракта?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">Да. FlowPilot Audit даёт разбор профиля, контента, визуала, оффера, конкурентов и пути в заявку с приоритетами на 30 дней. Подходит, если нужно понять слабые места до бюджета на сопровождение или перед запуском с нуля.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white border-2 border-dark rounded-2xl overflow-hidden transition-all hover:shadow-[4px_4px_0px_0px_#111] cursor-pointer">
+                        <div class="faq-header px-5 md:px-6 py-4 flex justify-between items-center select-none gap-4">
+                            <h4 class="font-heading font-bold text-base text-dark leading-snug">Гарантируете ли вы продажи и подписчиков?</h4>
+                            <div class="faq-icon w-8 h-8 shrink-0 rounded-full bg-bgLight border-2 border-dark flex items-center justify-center text-dark font-mono text-sm">+</div>
+                        </div>
+                        <div class="faq-content transition-all duration-300 px-5 md:px-6">
+                            <p class="font-body text-slate-600 pb-5 text-sm md:text-base leading-relaxed">Нет. Корректная SMM-команда не гарантирует продажи без учёта продукта, цены, спроса и отдела продаж. FlowPilot отвечает за систему, качество контента и продвижения, аналитику и улучшение гипотез. Мы не продаём накрутку и не обещаем взрывной рост за неделю.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Разделитель: FAQ → заявка -->
+    <div class="section-bridge relative z-20 border-y-4 border-dark py-3 md:py-3.5 overflow-hidden" aria-hidden="true">
+        <div class="section-bridge-track flex w-max">
+            <span class="px-12 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-white/90 whitespace-nowrap">FAQ · Ответы на вопросы · FlowPilot</span>
+            <span class="px-12 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-amber whitespace-nowrap">Следующий шаг · Личный разбор · Founder-led</span>
+            <span class="px-12 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-white/90 whitespace-nowrap">Стратегия · Контент · Визуал · Продвижение · Аналитика</span>
+            <span class="px-12 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-amber whitespace-nowrap">Следующий шаг · Личный разбор · Founder-led</span>
+            <span class="px-12 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-white/90 whitespace-nowrap">FAQ · Ответы на вопросы · FlowPilot</span>
+            <span class="px-12 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-amber whitespace-nowrap">Следующий шаг · Личный разбор · Founder-led</span>
+            <span class="px-12 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-white/90 whitespace-nowrap">Стратегия · Контент · Визуал · Продвижение · Аналитика</span>
+            <span class="px-12 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-amber whitespace-nowrap">Следующий шаг · Личный разбор · Founder-led</span>
+        </div>
+    </div>
+
+    <!-- БЛОК 8: финальный CTA и заявка -->
+    <section id="final-cta" class="final-cta-section w-full py-16 md:py-24 px-4 md:px-8 lg:px-12 text-dark relative overflow-hidden border-b-4 border-dark">
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-10 items-stretch">
+                    <div class="relative z-10 flex flex-col justify-center">
+                        <div class="inline-flex w-fit items-center gap-2 px-3 py-1.5 border-2 border-dark bg-white text-dark font-mono text-[10px] md:text-xs font-bold mb-4 rounded-full">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber animate-pulse"></span>
+                            Узнали свою ситуацию?
+                        </div>
+                        <h2 class="font-heading font-black text-2xl md:text-3xl lg:text-[2.05rem] leading-[1.1] text-dark mb-3">
+                            Охваты есть, <span class="text-amber">а заявок нет?</span>
+                        </h2>
+                        <p class="font-body text-sm md:text-base text-slate-600 leading-relaxed max-w-xl mb-5">
+                            Это не про «мало постов». Обычно ломается связка: позиционирование, контент, визуал и путь к заявке. Разберём это спокойно, по вашему проекту.
+                        </p>
+
+                        <ul class="space-y-3">
+                            <li class="cta-pain-row flex gap-4 p-4 md:p-5 border-2 border-dark rounded-2xl rounded-l-xl">
+                                <span class="w-10 h-10 shrink-0 rounded-full bg-amber border-2 border-dark flex items-center justify-center text-dark font-mono text-sm font-bold">01</span>
+                                <div class="min-w-0 pt-0.5">
+                                    <p class="font-heading font-bold text-sm md:text-base text-dark leading-snug mb-1">Публикуете, но не видите связи с продажами</p>
+                                    <p class="font-body text-xs md:text-sm text-slate-500 leading-relaxed">Контент живой, а бизнес-эффект не считывается</p>
+                                </div>
+                            </li>
+                            <li class="cta-pain-row flex gap-4 p-4 md:p-5 border-2 border-dark rounded-2xl rounded-l-xl">
+                                <span class="w-10 h-10 shrink-0 rounded-full bg-amber border-2 border-dark flex items-center justify-center text-dark font-mono text-sm font-bold">02</span>
+                                <div class="min-w-0 pt-0.5">
+                                    <p class="font-heading font-bold text-sm md:text-base text-dark leading-snug mb-1">Бренд не запоминается с первого касания</p>
+                                    <p class="font-body text-xs md:text-sm text-slate-500 leading-relaxed">Профиль выглядит аккуратно, но не объясняет ценность</p>
+                                </div>
+                            </li>
+                            <li class="cta-pain-row flex gap-4 p-4 md:p-5 border-2 border-dark rounded-2xl rounded-l-xl">
+                                <span class="w-10 h-10 shrink-0 rounded-full bg-amber border-2 border-dark flex items-center justify-center text-dark font-mono text-sm font-bold">03</span>
+                                <div class="min-w-0 pt-0.5">
+                                    <p class="font-heading font-bold text-sm md:text-base text-dark leading-snug mb-1">Каждую неделю снова решаете, что выкладывать</p>
+                                    <p class="font-body text-xs md:text-sm text-slate-500 leading-relaxed">Нет системы, только срочные задачи и хаос</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-founder-panel relative flex flex-col bg-white border-2 border-dark rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#111]">
+                        <div class="absolute -top-3 -right-2 md:-right-3 w-14 h-14 bg-blue text-white font-heading font-black text-xl rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md shadow-[3px_3px_0px_0px_#111] transform rotate-12 flex items-center justify-center select-none" aria-hidden="true">FP</div>
+
+                        <div class="flex items-center gap-3 mb-4 pr-10">
+                            <span class="w-11 h-11 shrink-0 rounded-full bg-dark text-white border-2 border-dark flex items-center justify-center font-heading font-black text-lg">А</span>
+                            <div>
+                                <p class="font-heading font-black text-base md:text-lg text-dark leading-tight">Александр</p>
+                                <p class="font-mono text-[10px] md:text-xs font-bold text-slate-600 uppercase tracking-wide">Основатель FlowPilot</p>
+                            </div>
+                        </div>
+
+                        <blockquote class="font-body text-sm md:text-base text-dark leading-relaxed mb-4">
+                            Первый разбор веду лично: где теряются смысл и заявки, с чего логично начать и нужен ли вам полный формат сейчас. Без менеджера-прокладки и без шаблонного КП.
+                        </blockquote>
+
+                        <div id="lead-form" class="cta-founder-form mt-auto bg-bgLight/60 border-2 border-dark rounded-xl md:rounded-2xl p-4 md:p-5">
+                            <p class="font-heading font-black text-base md:text-lg text-dark mb-0.5">Заявка на разбор</p>
+                            <p class="font-body text-xs md:text-sm text-slate-600 mb-4">Оставьте контакт — Александр ответит лично в рабочее время. Без менеджеров и автоответчиков.</p>
+
+                            <form id="fp-lead-form" class="space-y-3 relative" novalidate>
+                                <input type="hidden" name="utm_source" id="utm_source">
+                                <input type="hidden" name="utm_medium" id="utm_medium">
+                                <input type="hidden" name="utm_campaign" id="utm_campaign">
+
+                                <div class="fp-honeypot" aria-hidden="true">
+                                    <label for="lead-company">Компания</label>
+                                    <input type="text" name="company" id="lead-company" tabindex="-1" autocomplete="off" maxlength="200">
+                                </div>
+
+                                <div class="grid sm:grid-cols-2 gap-3">
+                                    <label class="block">
+                                        <span class="font-heading font-bold text-xs text-dark mb-1 block">Имя *</span>
+                                        <input type="text" name="name" id="lead-name" required autocomplete="name" maxlength="80" class="w-full px-3 py-2.5 border-2 border-dark rounded-lg font-body text-sm bg-bgLight/40" placeholder="Как к вам обращаться">
+                                    </label>
+                                    <label class="block">
+                                        <span class="font-heading font-bold text-xs text-dark mb-1 block">Telegram или телефон *</span>
+                                        <input type="text" name="contact" id="lead-contact" required autocomplete="tel" maxlength="120" class="w-full px-3 py-2.5 border-2 border-dark rounded-lg font-body text-sm bg-bgLight/40" placeholder="@username или +7 …">
+                                    </label>
+                                </div>
+
+                                <label class="block">
+                                    <span class="font-heading font-bold text-xs text-dark mb-1 block">Ссылка на соцсети или сайт</span>
+                                    <input type="url" name="social" id="lead-social" maxlength="500" class="w-full px-3 py-2.5 border-2 border-dark rounded-lg font-body text-sm bg-bgLight/40" placeholder="https://…">
+                                </label>
+
+                                <label class="block">
+                                    <span class="font-heading font-bold text-xs text-dark mb-1 block">Что хотите улучшить?</span>
+                                    <textarea name="message" id="lead-message" rows="2" maxlength="2000" class="w-full px-3 py-2.5 border-2 border-dark rounded-lg font-body text-sm bg-bgLight/40 resize-y min-h-[72px]" placeholder="Кратко о задаче и нише"></textarea>
+                                </label>
+
+                                <label class="flex items-start gap-2.5 cursor-pointer">
+                                    <input type="checkbox" name="pd_consent" id="lead-consent" required class="mt-0.5 w-4 h-4 shrink-0 accent-amber border-2 border-dark rounded">
+                                    <span class="font-body text-[11px] md:text-xs text-slate-600 leading-relaxed">
+                                        Согласен(на) на <a href="legal/personal-data-consent.html" target="_blank" rel="noopener noreferrer" class="text-blue font-bold hover:underline">обработку персональных данных</a> и ознакомлен(а) с <a href="legal/privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-blue font-bold hover:underline">политикой конфиденциальности</a>. *
+                                    </span>
+                                </label>
+
+                                <p id="lead-form-error" class="hidden text-xs font-bold text-red-600" role="alert"></p>
+
+                                <button type="submit" class="w-full py-3.5 px-5 bg-amber text-dark border-2 border-dark rounded-xl font-heading font-black text-sm md:text-base shadow-[3px_3px_0px_0px_#111] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_0px_#111] transition-all">
+                                    Отправить заявку на разбор
+                                </button>
+                            </form>
+
+                            <div id="lead-form-success-panel" class="hidden text-center py-4 md:py-6" role="status" aria-live="polite">
+                                <span class="inline-flex w-12 h-12 items-center justify-center rounded-full bg-green/15 border-2 border-dark text-green font-heading font-black text-xl mb-3" aria-hidden="true">✓</span>
+                                <p class="font-heading font-black text-lg md:text-xl text-dark mb-2">Заявка принята</p>
+                                <p id="lead-form-success" class="font-body text-sm text-slate-600 leading-relaxed max-w-sm mx-auto mb-4"></p>
+                                <a id="lead-form-telegram-fallback" href="#" target="_blank" rel="noopener noreferrer" class="hidden inline-flex items-center justify-center gap-2 py-2.5 px-5 bg-white border-2 border-dark rounded-xl font-heading font-bold text-sm text-dark hover:bg-bgLight transition-colors">
+                                    Написать в Telegram
+                                </a>
+                            </div>
+
+                            <p class="mt-3 text-center">
+                                <a href="#pricing" class="text-xs font-body font-bold text-slate-600 hover:text-blue transition-colors">Сначала посмотреть форматы и цены</a>
+                            </p>
+                            <p class="font-mono text-[10px] text-slate-500 leading-relaxed text-center mt-2">
+                                Ответ в рабочее время · Zoom/Telegram · по всей России и СНГ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://flowpilot.ru/#organization",
+                "name": "FlowPilot",
+                "url": "https://flowpilot.ru/",
+                "description": "FlowPilot — SMM-компания для предпринимателей, блогеров и онлайн-школ в России и СНГ. Выстраивает соцсети как систему роста: позиционирование, контент, визуал, продвижение, аналитика и путь к заявкам.",
+                "areaServed": ["RU", "BY", "KZ", "AM", "AZ", "GE", "KG", "MD", "TJ", "TM", "UZ"],
+                "founder": {
+                    "@type": "Person",
+                    "name": "Александр",
+                    "jobTitle": "Основатель FlowPilot"
+                }
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": "https://flowpilot.ru/#service",
+                "name": "FlowPilot",
+                "url": "https://flowpilot.ru/",
+                "serviceType": "Social Media Marketing",
+                "description": "SMM-система для бизнеса, блогеров и онлайн-школ: стратегия, контент, визуал, продвижение и аналитика.",
+                "areaServed": ["RU", "BY", "KZ", "AM", "AZ", "GE", "KG", "MD", "TJ", "TM", "UZ"],
+                "priceRange": "от 75 000 ₽",
+                "provider": { "@id": "https://flowpilot.ru/#organization" }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://flowpilot.ru/#website",
+                "url": "https://flowpilot.ru/",
+                "name": "FlowPilot",
+                "description": "SMM-агентство FlowPilot: система роста в соцсетях",
+                "inLanguage": "ru-RU",
+                "publisher": { "@id": "https://flowpilot.ru/#organization" }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://flowpilot.ru/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Что делает SMM-компания FlowPilot?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "FlowPilot помогает бизнесу, блогерам и онлайн-школам в России и СНГ выстроить соцсети как систему роста. В работу входят позиционирование, контент, визуал, продвижение, аналитика и связка публикаций с заявками. Это не разовая отрисовка постов, а управляемый процесс с понятными этапами и ответственностью команды."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Чем FlowPilot отличается от обычного ведения соцсетей?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Ведение часто сводится к графику публикаций без стратегии. FlowPilot начинает с цели и аудитории: что должен понять человек, почему ему можно доверять, как он переходит в заявку. Контент, визуал и продвижение собираются в SMM-систему с гипотезами и отчётностью, а не в поток постов для активности."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "С каких площадок вы ведете соцсети?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "В приоритете MAX, VK, сайт и блог на WordPress, Pinterest, Дзен и Одноклассники. Instagram и Threads подключаем по запросу, если они критичны для вашей аудитории. Площадку выбираем под нишу и цель, а не по модному списку."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Подходит ли FlowPilot для малого бизнеса?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Да. Мы выступаем как внешняя SMM-команда: стратегия, контент, визуал, продвижение и отчётность без найма нескольких исполнителей. Важно, чтобы у вас был продукт или услуга, на которые можно опереться в коммуникации, и готовность участвовать в согласованиях и обратной связи."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Сколько стоит SMM сопровождение?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "FlowPilot Audit от 75 000 ₽, Brand Setup от 100 000 ₽, Content System от 150 000 ₽ в месяц, Creator Growth от 180 000 ₽ в месяц, SMM Growth от 200 000 ₽ в месяц, Full Media System от 300 000 ₽ в месяц. Реклама, съёмки, посевы и платные сервисы оплачиваются отдельно."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Создаете ли вы статьи и фото без AI-маркеров?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Да. Статьи и визуалы проходят редакторскую доработку без технических AI-маркеров в финальной публикации. AI используется как инструмент ускорения черновиков и анализа, а не как замена стратегии."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Используете ли вы нейросети и автоматизацию?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "AI используется для ускорения идей, черновиков, анализа и отчетов. Make.com помогает связать формы, CRM, Telegram и таблицы. Стратегия и финальные тексты остаются под контролем команды. Продажи не гарантируем. ChatGPT является товарным знаком OpenAI, Inc."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Чем FlowPilot отличается от фрилансера или дешёвого SMM?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Фрилансер закрывает узкую задачу: тексты, дизайн или редкие посты. FlowPilot даёт founder-led стратегию и подключает специалистов под роли: упаковка, контент, продвижение, аналитика. Вы платите за систему и процесс, а не только за количество публикаций."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Можно ли начать с аудита без долгого контракта?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Да. FlowPilot Audit даёт разбор профиля, контента, визуала, оффера, конкурентов и пути в заявку с приоритетами на 30 дней. Подходит, если нужно понять слабые места до бюджета на сопровождение или перед запуском с нуля."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Гарантируете ли вы продажи и подписчиков?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Нет. Корректная SMM-команда не гарантирует продажи без учёта продукта, цены, спроса и отдела продаж. FlowPilot отвечает за систему, качество контента и продвижения, аналитику и улучшение гипотез. Мы не продаём накрутку и не обещаем взрывной рост за неделю."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+
+    <!-- Cookie-баннер -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-5 pointer-events-none" aria-live="polite">
+        <div class="max-w-4xl mx-auto bg-white border-2 border-dark rounded-2xl shadow-[4px_4px_0px_0px_#111] p-4 md:p-5 flex flex-col sm:flex-row sm:items-center gap-4 pointer-events-auto">
+            <p class="font-body text-xs md:text-sm text-slate-700 leading-relaxed flex-1">
+                Сайт использует cookie для работы форм и аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="legal/cookie-policy.html" class="text-blue font-bold hover:underline">политикой cookie</a> и <a href="legal/privacy-policy.html" class="text-blue font-bold hover:underline">обработкой данных</a>.
+            </p>
+            <div class="flex gap-2 shrink-0">
+                <a href="legal/cookie-policy.html" class="px-4 py-2.5 border-2 border-dark rounded-xl font-heading font-bold text-xs md:text-sm hover:bg-bgLight transition-colors">Подробнее</a>
+                <button type="button" id="cookie-accept" class="px-4 py-2.5 bg-amber text-dark border-2 border-dark rounded-xl font-heading font-black text-xs md:text-sm shadow-[2px_2px_0px_0px_#111] hover:shadow-[4px_4px_0px_0px_#111] transition-all">Принять</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="w-full bg-dark text-white border-t-4 border-dark z-30 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+            <div class="col-span-2 md:col-span-1">
+                <p class="font-heading font-black text-xl mb-2">FlowPilot</p>
+                <p class="text-gray-400 text-xs leading-relaxed mb-4">Соцсети, которые работают на рост. SMM-система для бизнеса, блогеров и онлайн-школ в России и СНГ.</p>
+                <a href="https://t.me/capone_69" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber font-bold hover:underline">Telegram @capone_69</a>
+            </div>
+            <div>
+                <p class="font-heading font-bold text-xs uppercase tracking-wide text-gray-300 mb-3">Разделы</p>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#growth-system" class="hover:text-amber transition-colors">Система роста</a></li>
+                    <li><a href="#pricing" class="hover:text-amber transition-colors">Форматы и цены</a></li>
+                    <li><a href="#how-it-works" class="hover:text-amber transition-colors">Как работаем</a></li>
+                    <li><a href="#about-company" class="hover:text-amber transition-colors">О компании</a></li>
+                    <li><a href="#faq-trust" class="hover:text-amber transition-colors">FAQ</a></li>
+                    <li><a href="#lead-form" class="hover:text-amber transition-colors">Заявка</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-heading font-bold text-xs uppercase tracking-wide text-gray-300 mb-3">Документы</p>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="legal/privacy-policy.html" class="hover:text-amber transition-colors">Конфиденциальность и ПД</a></li>
+                    <li><a href="legal/personal-data-consent.html" class="hover:text-amber transition-colors">Согласие на ПД</a></li>
+                    <li><a href="legal/cookie-policy.html" class="hover:text-amber transition-colors">Cookie и метрики</a></li>
+                    <li><a href="legal/confidentiality-policy.html" class="hover:text-amber transition-colors">Конфиденциальность клиентов</a></li>
+                    <li><a href="legal/terms-of-use.html" class="hover:text-amber transition-colors">Пользовательское соглашение</a></li>
+                    <li><a href="legal/legal-contacts.html" class="hover:text-amber transition-colors">Реквизиты</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-heading font-bold text-xs uppercase tracking-wide text-gray-300 mb-3">Контакты</p>
+                <ul class="space-y-2 text-gray-400 text-xs leading-relaxed">
+                    <li>Основатель: Александр</li>
+                    <li>Работаем по всей России и СНГ</li>
+                    <li>Zoom / Telegram</li>
+                    <li><a href="legal/index.html" class="text-amber hover:underline">Все юридические документы</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10 px-4 md:px-8 py-5 max-w-6xl mx-auto space-y-2">
+            <p class="text-[10px] md:text-xs text-gray-500 leading-relaxed">Meta Platforms Inc. и Instagram признаны экстремистскими и запрещены на территории Российской Федерации.</p>
+            <p class="text-[10px] md:text-xs text-gray-500 leading-relaxed">ChatGPT — товарный знак OpenAI, Inc. Упоминания Instagram и сервисов Meta Platforms, Inc. приведены только для описания форматов работы и не означают одобрения или партнёрства с правообладателем.</p>
+            <p class="text-[10px] md:text-xs text-gray-600 pt-1">© 2025–2026 FlowPilot. Информация на сайте не является публичной офертой. Оператор ПД: Александр (бренд FlowPilot), физическое лицо.</p>
+        </div>
+    </footer>
+
+    <script>
+        const FP_UTM_FIELDS = ['utm_source', 'utm_medium', 'utm_campaign'];
+        const FP_TELEGRAM_LEAD_BASE = 'https://t.me/capone_69?text=';
+        const FP_COOKIE_CONSENT_KEY = 'fp_cookie_consent';
+        const FP_LEGACY_LEAD_KEY = 'fp_lead_last';
+
+        // GSAP подгружается только для блока «Фабрика SMM», не блокирует первый экран
+        (function () {
+            const board = document.getElementById('game-board');
+            if (!board) return;
+
+            function loadGsap(callback) {
+                if (window.gsap) {
+                    callback();
+                    return;
+                }
+                let script = document.getElementById('gsap-lib');
+                if (!script) {
+                    script = document.createElement('script');
+                    script.id = 'gsap-lib';
+                    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js';
+                    script.async = true;
+                    document.head.appendChild(script);
+                }
+                script.addEventListener('load', callback, { once: true });
+            }
+
+            loadGsap(function initFactoryGame() {
+        function moveWorkerEl(worker, x, y, duration, onComplete) {
+            worker.el.classList.add('walking');
+            gsap.to(worker.el, {
+                left: `${x}%`,
+                top: `${y}%`,
+                duration,
+                ease: 'power1.inOut',
+                onComplete: () => {
+                    worker.el.classList.remove('walking');
+                    if (onComplete) onComplete();
+                }
+            });
+        }
+
+        // Игровая логика Фабрики: живая SMM-команда
+        let globalIncome = 70300;
+        let activeTasks = 0;
+        let completedTasks = 0;
+        let leads = 4;
+        let kpi = 70;
+
+        const liveLog = document.getElementById('team-live-log');
+        const shiftPlan = document.getElementById('shift-plan');
+
+        const machines = [
+            { el: document.getElementById('machine-1'), occupied: false, x: 40, y: 24, type: 'strategy', owner: 'STRAT' },
+            { el: document.getElementById('machine-2'), occupied: false, x: 56, y: 24, type: 'content', owner: 'COPY' },
+            { el: document.getElementById('machine-3'), occupied: false, x: 40, y: 48, type: 'design', owner: 'DESIGN' },
+            { el: document.getElementById('machine-4'), occupied: false, x: 56, y: 48, type: 'analytics', owner: 'ANALYTICS' },
+            { el: document.getElementById('machine-5'), occupied: false, x: 64, y: 24, type: 'ads', owner: 'ADS' },
+            { el: document.getElementById('machine-6'), occupied: false, x: 64, y: 48, type: 'sales', owner: 'SALES' }
+        ];
+
+        const workers = [
+            { id: 'w-1', role: 'STRAT', skill: 'strategy', rest: { x: 78, y: 76 } },
+            { id: 'w-2', role: 'COPY', skill: 'content', rest: { x: 82, y: 76 } },
+            { id: 'w-3', role: 'DESIGN', skill: 'design', rest: { x: 74, y: 79 } },
+            { id: 'w-4', role: 'ANALYTICS', skill: 'analytics', rest: { x: 46, y: 78 } },
+            { id: 'w-5', role: 'ADS', skill: 'ads', rest: { x: 50, y: 78 } },
+            { id: 'w-6', role: 'SALES', skill: 'sales', rest: { x: 54, y: 78 } }
+        ].map((w) => ({
+            ...w,
+            el: document.getElementById(w.id),
+            state: 'idle',
+            energy: 100
+        }));
+
+        const taskPool = [
+            { title: 'Анализ ЦА', type: 'strategy', payout: 450, leads: 1 },
+            { title: 'Контент-план', type: 'content', payout: 500, leads: 1 },
+            { title: 'Сценарий Reels', type: 'content', payout: 550, leads: 1 },
+            { title: 'Дизайн креатива', type: 'design', payout: 600, leads: 0 },
+            { title: 'А/Б тест оффера', type: 'analytics', payout: 700, leads: 1 },
+            { title: 'Оптимизация рекламы', type: 'analytics', payout: 900, leads: 2 },
+            { title: 'Сбор отчета', type: 'analytics', payout: 400, leads: 0 },
+            { title: 'Запуск рекламы', type: 'ads', payout: 950, leads: 2 },
+            { title: 'Созвон с лидом', type: 'sales', payout: 800, leads: 2 },
+            { title: 'Дожим заявки', type: 'sales', payout: 650, leads: 1 }
+        ];
+
+        const taskQueue = [...taskPool];
+        const shiftSteps = [
+            '1) Исследование спроса',
+            '2) Контент и визуал',
+            '3) Запуск и аналитика',
+            '4) Обработка лидов'
+        ];
+        let shiftStepIndex = 0;
+
+        function updateUI() {
+            document.getElementById('mm-counter').innerText = `$${globalIncome.toLocaleString()}`;
+            document.getElementById('ui-income').innerText = `$${globalIncome.toLocaleString()}`;
+            document.getElementById('ui-tasks').innerText = activeTasks;
+            document.getElementById('ui-leads').innerText = leads;
+            document.getElementById('ui-kpi').innerText = `${kpi}%`;
+            gsap.fromTo('#mm-counter', { scale: 1.18, color: '#10B981' }, { scale: 1, color: '#FBBF24', duration: 0.3 });
+        }
+
+        function updateLiveLog() {
+            liveLog.innerHTML = workers.map((worker) => {
+                const chip = worker.state === 'working' ? '●' : worker.state === 'moving' ? '◑' : worker.state === 'resting' ? '◉' : '○';
+                return `<div>${chip} ${worker.role}: ${worker.state}</div>`;
+            }).join('');
+        }
+
+        function updateTaskPanel() {
+            const ids = ['q-1', 'q-2', 'q-3', 'q-4'];
+            ids.forEach((id, idx) => {
+                const el = document.getElementById(id);
+                const t = taskQueue[idx];
+                el.textContent = t ? t.title : 'Ожидание задачи';
+            });
+        }
+
+        function updateShiftPlan() {
+            const lines = shiftSteps.map((step, idx) => {
+                const isActive = idx === shiftStepIndex;
+                const prefix = isActive ? '▶' : '•';
+                return `<div style="color:${isActive ? '#111' : '#475569'}">${prefix} ${step}</div>`;
+            }).join('');
+            shiftPlan.innerHTML = lines;
+        }
+
+        function randomOfficePoint() {
+            return {
+                x: 36 + Math.random() * 54,
+                y: 20 + Math.random() * 46
+            };
+        }
+
+        function showBubble(workerEl, text) {
+            const bubble = workerEl.querySelector('.bubble');
+            bubble.innerText = text;
+            gsap.to(bubble, { opacity: 1, y: -10, duration: 0.25 });
+        }
+
+        function hideBubble(workerEl) {
+            const bubble = workerEl.querySelector('.bubble');
+            gsap.to(bubble, { opacity: 0, y: 0, duration: 0.2 });
+        }
+
+        function setTaskChip(workerEl, text) {
+            const chip = workerEl.querySelector('.task-chip');
+            chip.innerText = text;
+            chip.style.display = text ? 'block' : 'none';
+        }
+
+        function drawPath(fromEl, toMachine) {
+            const existing = document.getElementById('temp-path');
+            if (existing) existing.remove();
+            const path = document.createElement('div');
+            path.id = 'temp-path';
+            path.className = 'walk-path';
+            board.appendChild(path);
+
+            const boardRect = board.getBoundingClientRect();
+            const fromRect = fromEl.getBoundingClientRect();
+            const toRect = toMachine.el.getBoundingClientRect();
+            const x1 = (fromRect.left + fromRect.width / 2 - boardRect.left);
+            const y1 = (fromRect.top + fromRect.height / 2 - boardRect.top);
+            const x2 = (toRect.left + toRect.width / 2 - boardRect.left);
+            const y2 = (toRect.top + toRect.height / 2 - boardRect.top);
+            const dx = x2 - x1;
+            const dy = y2 - y1;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+
+            path.style.left = `${x1}px`;
+            path.style.top = `${y1}px`;
+            path.style.width = `${dist}px`;
+            path.style.transform = `rotate(${angle}deg)`;
+            gsap.fromTo(path, { opacity: 0 }, { opacity: 1, duration: 0.12 });
+            setTimeout(() => path.remove(), 800);
+        }
+
+        function spawnMoney(x, y, amount) {
+            const money = document.createElement('div');
+            money.className = 'floating-money';
+            money.innerText = `+$${amount}`;
+            money.style.left = `${x}%`;
+            money.style.top = `${y}%`;
+            board.appendChild(money);
+
+            const tl = gsap.timeline({
+                onComplete: () => {
+                    money.remove();
+                    globalIncome += amount;
+                    updateUI();
+                }
+            });
+            tl.to(money, { opacity: 1, y: -18, duration: 0.5, ease: 'back.out(2)' })
+              .to(money, { duration: 0.55 })
+              .to(money, { left: '50%', top: '45%', scale: 0.5, opacity: 0, duration: 1.05, ease: 'power2.in' });
+        }
+
+        function findMachineForTask(taskType, role) {
+            const own = machines.find((m) => !m.occupied && m.owner === role);
+            if (own) return own;
+            const preferred = machines.find((m) => !m.occupied && m.type === taskType);
+            if (preferred) return preferred;
+            return machines.find((m) => !m.occupied);
+        }
+
+        function randomTaskForWorker(worker) {
+            const preferred = taskPool.filter((t) => t.type === worker.skill || (worker.skill === 'sales' && t.type === 'content'));
+            const source = preferred.length ? preferred : taskPool;
+            return source[Math.floor(Math.random() * source.length)];
+        }
+
+        function takeTaskForWorker(worker) {
+            const index = taskQueue.findIndex((t) => t.type === worker.skill);
+            if (index >= 0) return taskQueue.splice(index, 1)[0];
+            return randomTaskForWorker(worker);
+        }
+
+        function refillQueue() {
+            while (taskQueue.length < 8) {
+                taskQueue.push(taskPool[Math.floor(Math.random() * taskPool.length)]);
+            }
+            updateTaskPanel();
+        }
+
+        function assignWork(worker, task = null) {
+            if (worker.state === 'working' || worker.state === 'moving') return;
+            const chosenTask = task || takeTaskForWorker(worker);
+            const machine = findMachineForTask(chosenTask.type, worker.role);
+            if (!machine) {
+                showBubble(worker.el, 'Все станции заняты');
+                setTimeout(() => hideBubble(worker.el), 900);
+                return;
+            }
+
+            machine.occupied = true;
+            worker.state = 'moving';
+            activeTasks++;
+            updateLiveLog();
+            updateUI();
+
+            setTaskChip(worker.el, chosenTask.title);
+            showBubble(worker.el, chosenTask.title);
+            drawPath(worker.el, machine);
+
+            const targetX = machine.x - 2;
+            const targetY = machine.y + 2;
+
+            moveWorkerEl(worker, targetX, targetY, 3.9 + Math.random() * 2.1, () => {
+                    worker.state = 'working';
+                    updateLiveLog();
+
+                    machine.el.classList.add('working');
+                    const progressBar = machine.el.querySelector('.progress-bar-container');
+                    const progressFill = machine.el.querySelector('.progress-bar-fill');
+                    progressBar.style.display = 'block';
+
+                    gsap.to(progressFill, {
+                        width: '100%',
+                        duration: 7.8 + Math.random() * 3.2,
+                        ease: 'linear',
+                        onComplete: () => {
+                            progressBar.style.display = 'none';
+                            progressFill.style.width = '0%';
+                            machine.el.classList.remove('working');
+                            machine.occupied = false;
+
+                            worker.state = 'idle';
+                            worker.energy = Math.max(20, worker.energy - 22);
+                            activeTasks--;
+                            completedTasks++;
+                            leads += chosenTask.leads;
+                            kpi = Math.min(99, 70 + Math.floor(completedTasks / 3));
+                            updateLiveLog();
+                            refillQueue();
+
+                            spawnMoney(targetX, targetY, chosenTask.payout);
+                            hideBubble(worker.el);
+                            setTaskChip(worker.el, '');
+
+                            if (worker.energy < 45) {
+                                sendToRest(worker);
+                            } else {
+                                patrol(worker, true);
+                            }
+                        }
+                    });
+            });
+        }
+
+        function sendToRest(worker) {
+            worker.state = 'moving';
+            updateLiveLog();
+            showBubble(worker.el, 'Иду в отдых');
+            moveWorkerEl(worker, worker.rest.x, worker.rest.y, 4.1 + Math.random() * 2.4, () => {
+                    worker.state = 'resting';
+                    updateLiveLog();
+                    showBubble(worker.el, 'Перерыв');
+                    gsap.delayedCall(4.4 + Math.random() * 2.8, () => {
+                        worker.energy = Math.min(100, worker.energy + 40);
+                        hideBubble(worker.el);
+                        worker.state = 'idle';
+                        updateLiveLog();
+                        patrol(worker, false);
+                    });
+            });
+        }
+
+        function patrol(worker, quick = false) {
+            if (worker.state !== 'idle') return;
+            worker.state = 'moving';
+            updateLiveLog();
+            const point = randomOfficePoint();
+            moveWorkerEl(worker, point.x, point.y, quick ? 3.7 + Math.random() * 1.5 : 5.6 + Math.random() * 3.1, () => {
+                    worker.state = 'idle';
+                    updateLiveLog();
+            });
+        }
+
+        function autoDispatch() {
+            const idleWorkers = workers.filter((w) => w.state === 'idle');
+            if (!idleWorkers.length) return;
+            const hasFreeMachine = machines.some((m) => !m.occupied);
+            const worker = idleWorkers[Math.floor(Math.random() * idleWorkers.length)];
+            if (worker.energy < 35) {
+                sendToRest(worker);
+                return;
+            }
+            if (hasFreeMachine) {
+                assignWork(worker);
+            } else {
+                patrol(worker);
+            }
+        }
+
+        function idlePatrol() {
+            workers.filter((w) => w.state === 'idle').forEach((worker) => {
+                if (Math.random() < 0.65) {
+                    patrol(worker);
+                }
+            });
+        }
+
+        // Клик по сотруднику вручную назначает ему профильную задачу
+        gsap.from(workers.map((w) => w.el), { opacity: 0, y: 12, duration: 0.7, stagger: 0.08, ease: 'power2.out' });
+
+        workers.forEach((worker) => {
+            const bubble = worker.el.querySelector('.bubble');
+            gsap.to(bubble, { opacity: 1, y: -10, duration: 0.4, delay: Math.random() * 0.7 });
+            setTimeout(() => { if (worker.state === 'idle') hideBubble(worker.el); }, 2500 + Math.random() * 1500);
+            worker.el.addEventListener('click', () => assignWork(worker, randomTaskForWorker(worker)));
+        });
+
+        refillQueue();
+        updateTaskPanel();
+        updateShiftPlan();
+        updateUI();
+        updateLiveLog();
+
+        // Постоянная жизнь офиса
+        setInterval(autoDispatch, 2800);
+        setInterval(idlePatrol, 5200);
+        setInterval(() => {
+            shiftStepIndex = (shiftStepIndex + 1) % shiftSteps.length;
+            updateShiftPlan();
+        }, 12000);
+
+        // Стартовая расстановка, чтобы сцена сразу была живой
+        workers.forEach((worker, idx) => {
+            gsap.delayedCall(0.3 + idx * 0.2, () => patrol(worker, true));
+        });
+
+            }); // initFactoryGame
+        })();
+
+        function activateAudienceCard(cards, card) {
+            cards.forEach((c) => c.classList.remove('active'));
+            card.classList.add('active');
+        }
+
+        function initAudienceCards() {
+            const audCards = document.querySelectorAll('.aud-card');
+            audCards.forEach((card) => {
+                card.addEventListener('click', () => activateAudienceCard(audCards, card));
+                card.addEventListener('mouseenter', () => activateAudienceCard(audCards, card));
+            });
+        }
+
+        function initFaqAccordion() {
+            const root = document.getElementById('faq-trust');
+            if (!root) return;
+
+            const closeItem = (item) => {
+                item.classList.remove('is-open', 'border-blue');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+                if (!content || !icon) return;
+                content.style.height = '0px';
+                icon.textContent = '+';
+                icon.classList.remove('bg-blue', 'text-white');
+                icon.classList.add('bg-bgLight', 'text-dark');
+            };
+
+            const openItem = (item) => {
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+                if (!content || !icon) return;
+                item.classList.add('is-open', 'border-blue');
+                content.style.height = content.scrollHeight + 'px';
+                icon.textContent = '−';
+                icon.classList.remove('bg-bgLight', 'text-dark');
+                icon.classList.add('bg-blue', 'text-white');
+            };
+
+            root.querySelectorAll('.faq-item').forEach((item) => {
+                item.addEventListener('click', () => {
+                    const wasOpen = item.classList.contains('is-open');
+                    root.querySelectorAll('.faq-item').forEach(closeItem);
+                    if (!wasOpen) openItem(item);
+                });
+            });
+        }
+
+        function initCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+            if (!banner || !acceptBtn) return;
+
+            const key = FP_COOKIE_CONSENT_KEY;
+            if (localStorage.getItem(key) === 'accepted') {
+                banner.remove();
+                return;
+            }
+
+            requestAnimationFrame(() => banner.classList.add('is-visible'));
+
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem(key, 'accepted');
+                banner.classList.remove('is-visible');
+                setTimeout(() => banner.remove(), 400);
+            });
+        }
+
+        function captureUTM() {
+            const params = new URLSearchParams(window.location.search);
+            FP_UTM_FIELDS.forEach((key) => {
+                const val = params.get(key);
+                const input = document.getElementById(key);
+                if (!input) return;
+                if (val) {
+                    sessionStorage.setItem(key, val);
+                    input.value = val;
+                } else {
+                    const stored = sessionStorage.getItem(key);
+                    if (stored) input.value = stored;
+                }
+            });
+        }
+
+        function buildLeadPayload(name, contact, social, message) {
+            const lines = [
+                'Заявка FlowPilot',
+                'Имя: ' + name,
+                'Контакт: ' + contact
+            ];
+            if (social) lines.push('Соцсети/сайт: ' + social);
+            if (message) lines.push('Задача: ' + message);
+            const utm = FP_UTM_FIELDS
+                .map((k) => document.getElementById(k)?.value)
+                .filter(Boolean);
+            if (utm.length) lines.push('UTM: ' + utm.join(', '));
+            return lines.join('\n');
+        }
+
+        function encodeTelegramPayload(payload) {
+            const maxEncodedLen = 3500;
+            let text = payload;
+            while (encodeURIComponent(text).length > maxEncodedLen && text.length > 0) {
+                text = text.slice(0, -80) + '…';
+            }
+            return encodeURIComponent(text);
+        }
+
+        function isPopupBlocked(popup) {
+            return !popup || popup.closed || typeof popup.closed === 'undefined';
+        }
+
+        function initLeadForm() {
+            const form = document.getElementById('fp-lead-form');
+            if (!form) return;
+
+            try { localStorage.removeItem(FP_LEGACY_LEAD_KEY); } catch (_) { /* ignore */ }
+
+            const errorEl = document.getElementById('lead-form-error');
+            const successEl = document.getElementById('lead-form-success');
+            const successPanel = document.getElementById('lead-form-success-panel');
+            const telegramFallback = document.getElementById('lead-form-telegram-fallback');
+            const consent = document.getElementById('lead-consent');
+            const honeypot = document.getElementById('lead-company');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                errorEl.classList.add('hidden');
+
+                if (honeypot && honeypot.value.trim()) {
+                    return;
+                }
+
+                const name = document.getElementById('lead-name').value.trim();
+                const contact = document.getElementById('lead-contact').value.trim();
+                const social = document.getElementById('lead-social').value.trim();
+                const message = document.getElementById('lead-message').value.trim();
+
+                if (!name || !contact) {
+                    errorEl.textContent = 'Укажите имя и контакт для связи.';
+                    errorEl.classList.remove('hidden');
+                    return;
+                }
+
+                if (!consent.checked) {
+                    errorEl.textContent = 'Для отправки нужно согласие на обработку персональных данных.';
+                    errorEl.classList.remove('hidden');
+                    return;
+                }
+
+                const payload = buildLeadPayload(name, contact, social, message);
+                const tgUrl = FP_TELEGRAM_LEAD_BASE + encodeTelegramPayload(payload);
+                const popup = window.open(tgUrl, '_blank', 'noopener,noreferrer');
+                const popupBlocked = isPopupBlocked(popup);
+
+                form.classList.add('hidden');
+                successPanel.classList.remove('hidden');
+
+                if (popupBlocked && telegramFallback) {
+                    telegramFallback.href = tgUrl;
+                    telegramFallback.classList.remove('hidden');
+                    successEl.textContent = 'Спасибо, ' + name + '. Браузер мог заблокировать открытие Telegram. Нажмите кнопку ниже — текст заявки уже подставлен. Александр ответит в рабочее время.';
+                } else {
+                    if (telegramFallback) telegramFallback.classList.add('hidden');
+                    successEl.textContent = 'Спасибо, ' + name + '. Откройте Telegram и отправьте сообщение. Александр свяжется с вами по ' + contact + ' в рабочее время.';
+                }
+            });
+        }
+
+        function initSite() {
+            initAudienceCards();
+            initFaqAccordion();
+            initCookieBanner();
+            captureUTM();
+            initLeadForm();
+        }
+
+        initSite();
+    </script>
+</body>
+</html>
